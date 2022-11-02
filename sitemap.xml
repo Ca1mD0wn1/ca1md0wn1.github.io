@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.yexingcheng.com/Screeps/action1/</loc>
+    <loc>https://www.yexingcheng.com/wx-app/day3/</loc>
     
-    <lastmod>2022-11-01</lastmod>
+    <lastmod>2022-11-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -12,6 +12,24 @@
   
   <url>
     <loc>https://www.yexingcheng.com/wx-app/day2/</loc>
+    
+    <lastmod>2022-11-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yexingcheng.com/interview/programming/</loc>
+    
+    <lastmod>2022-11-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yexingcheng.com/Screeps/action1/</loc>
     
     <lastmod>2022-11-01</lastmod>
     
@@ -119,15 +137,6 @@
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/interface/programming/</loc>
-    
-    <lastmod>2022-10-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.yexingcheng.com/computer/rightPointNewMd/</loc>
     
     <lastmod>2022-10-29</lastmod>
@@ -191,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/interface/interview/</loc>
+    <loc>https://www.yexingcheng.com/interview/interview/</loc>
     
     <lastmod>2022-10-24</lastmod>
     
@@ -326,13 +335,6 @@
 
   
   <url>
-    <loc>https://www.yexingcheng.com/tags/index/</loc>
-    <lastmod>2022-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.yexingcheng.com/tags/javascript/</loc>
     <lastmod>2022-11-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -341,6 +343,27 @@
   
   <url>
     <loc>https://www.yexingcheng.com/tags/screeps/</loc>
+    <lastmod>2022-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yexingcheng.com/tags/index/</loc>
+    <lastmod>2022-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yexingcheng.com/tags/windows/</loc>
+    <lastmod>2022-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yexingcheng.com/tags/windows11/</loc>
     <lastmod>2022-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -375,14 +398,7 @@
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/tags/windows/</loc>
-    <lastmod>2022-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.yexingcheng.com/tags/windows11/</loc>
+    <loc>https://www.yexingcheng.com/tags/router/</loc>
     <lastmod>2022-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -397,13 +413,6 @@
   
   <url>
     <loc>https://www.yexingcheng.com/tags/ts/</loc>
-    <lastmod>2022-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.yexingcheng.com/tags/router/</loc>
     <lastmod>2022-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -433,13 +442,6 @@
 
   
   <url>
-    <loc>https://www.yexingcheng.com/categories/index/</loc>
-    <lastmod>2022-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.yexingcheng.com/categories/Screeps/</loc>
     <lastmod>2022-11-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -447,14 +449,7 @@
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/categories/interface/</loc>
-    <lastmod>2022-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.yexingcheng.com/categories/react%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://www.yexingcheng.com/categories/index/</loc>
     <lastmod>2022-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -462,6 +457,20 @@
   
   <url>
     <loc>https://www.yexingcheng.com/categories/computer/</loc>
+    <lastmod>2022-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yexingcheng.com/categories/interview/</loc>
+    <lastmod>2022-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yexingcheng.com/categories/react%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2022-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
