@@ -260,8 +260,8 @@
 &lt;li&gt;&lt;strong&gt;entryPagePath&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;设置小程序默认的启动页面，如果不作设置，那么将会取 pages 数组 的第一项为默认启动项，开发过程中，一般不建议这么使用，你可以使用开发者工具中 添加编译模式 快速解决问题&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;E:%5CUsers%5CDeskdop%5CBlog%5Csource_posts%5Cwx-app%5Cday2%5C13.png&#34; alt=&#34;image-20220530113321490&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;E:%5CUsers%5CDeskdop%5CBlog%5Csource_posts%5Cwx-app%5Cday2%5C14.png&#34; alt=&#34;image-20220530113402566&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;13.png&#34; alt=&#34;image-20220530113321490&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;14.png&#34; alt=&#34;image-20220530113402566&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;pages&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -654,7 +654,7 @@
 &lt;/table&gt;
 &lt;h3 id=&#34;compiletype&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#compiletype&#34;&gt;#&lt;/a&gt; compileType&lt;/h3&gt;
 &lt;p&gt;编译类型作用于开发工具的以下设置&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;E:%5CUsers%5CDeskdop%5CBlog%5Csource_posts%5Cwx-app%5Cday2%5Cimage-20221101090136819.png&#34; alt=&#34;image-20221101090136819&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;image-20221101090136819.png&#34; alt=&#34;image-20221101090136819&#34;&gt;&lt;/p&gt;
 &lt;p&gt;有效值&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -677,7 +677,7 @@
 &lt;h3 id=&#34;setting&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#setting&#34;&gt;#&lt;/a&gt; setting&lt;/h3&gt;
 &lt;p&gt;项目的编译设置，可以指定以下设置。部分设置无法在  &lt;code&gt;project.private.config.json&lt;/code&gt;  中生效&lt;/p&gt;
 &lt;p&gt;以下字段可以开发者工具 - 详情 - 本地设置可以对应上&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;E:%5CUsers%5CDeskdop%5CBlog%5Csource_posts%5Cwx-app%5Cday2%5Cimage-20221101090621855.png&#34; alt=&#34;image-20221101090621855&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;image-20221101090621855.png&#34; alt=&#34;image-20221101090621855&#34;&gt;&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
