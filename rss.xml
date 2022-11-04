@@ -83,14 +83,7 @@
 &lt;p&gt;一个包含将数组与子数组中所有元素的新数组。&lt;/p&gt;
 &lt;h1 id=&#34;flatmap&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#flatmap&#34;&gt;#&lt;/a&gt; flatMap()&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt; &lt;code&gt;flatMap()&lt;/code&gt; &lt;/strong&gt; 方法首先使用映射函数映射每个元素，然后将结果压缩成一个新数组。它与 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvSmF2YVNjcmlwdC9SZWZlcmVuY2UvR2xvYmFsX09iamVjdHMvQXJyYXkvbWFw&#34;&gt;map&lt;/span&gt; 连着深度值为 1 的 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvSmF2YVNjcmlwdC9SZWZlcmVuY2UvR2xvYmFsX09iamVjdHMvQXJyYXkvZmxhdA==&#34;&gt;flat&lt;/span&gt; 几乎相同，但  &lt;code&gt;flatMap&lt;/code&gt;  通常在合并成一种方法的效率稍微高一些。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;const arr1 = [1, 2, [3], [4, 5], 6, []];
-
-const flattened = arr1.flatMap(num =&amp;gt; num);
-
-console.log(flattened);
-// expected output: Array [1, 2, 3, 4, 5, 6]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;参数-5&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参数-5&#34;&gt;#&lt;/a&gt; 参数&lt;/h2&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;figcaption data-lang=&#34;JavaScript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; arr1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; flattened &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; arr1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;flatMap&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;num&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&gt;&lt;/span&gt; num&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;flattened&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// expected output: Array [1, 2, 3, 4, 5, 6]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;参数-5&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#参数-5&#34;&gt;#&lt;/a&gt; 参数&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;callback&lt;/code&gt;&lt;/p&gt;
@@ -2293,31 +2286,6 @@ Page(&amp;#123;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://www.yexingcheng.com/Screeps/chinese/</guid>
-            <title>screeps汉化（steam)</title>
-            <link>https://www.yexingcheng.com/Screeps/chinese/</link>
-            <category term="screeps" scheme="https://www.yexingcheng.com/categories/Screeps/" />
-            <category term="javascript" scheme="https://www.yexingcheng.com/tags/javascript/" />
-            <category term="screeps" scheme="https://www.yexingcheng.com/tags/screeps/" />
-            <pubDate>Sun, 30 Oct 2022 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;如果你对 screeps 有所了解的话，那么你应该曾经听说过这个游戏的 steam 版本是基于 node 和 nw.js 进行开发的，说白了就是一个套壳浏览器，本质上还是一个 web 应用。既然是 web 应用，那么就可以用我们的 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwcyUzQSUyRiUyRmdyZWFzeWZvcmsub3JnJTJGemgtQ04lMkZzY3JpcHRzJTJGNDE2NjUxLXNjcmVlcHMtY2hpbmVzZS1wYWNr&#34;&gt;web 端汉化补丁&lt;/span&gt; 进行汉化。&lt;/p&gt;
-&lt;p&gt;这里我们看到默认是全英文版本，但由于本人是英语小白，又懒得去一个一个翻译，所以就想翻译这个界面&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;image-20221102235142846.png&#34; alt=&#34;image-20221102235142846&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;汉化步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#汉化步骤&#34;&gt;#&lt;/a&gt; 汉化步骤&lt;/h1&gt;
-&lt;p&gt;实际操作也非常的简单，首先我们通过 steam 打开 screeps 的本地目录：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;image-20221102235357536.png&#34; alt=&#34;image-20221102235357536&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;image-20221102235416601.png&#34; alt=&#34;image-20221102235416601&#34;&gt;&lt;/p&gt;
-&lt;p&gt;然后，你应该可以 &lt;strong&gt;找到一个名为 package.nw 的文件&lt;/strong&gt;，这个就是游戏的源码包。&lt;/p&gt;
-&lt;p&gt;然后用压缩文件的格式打开，这里我用的是 WINRAR&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;image-20221102235616013.png&#34; alt=&#34;image-20221102235616013&#34;&gt;&lt;/p&gt;
-&lt;p&gt;打开之后我们可以 &lt;strong&gt;找到一个名为 index.html 的文件，对其右键并选择编辑&lt;/strong&gt;，同理不要进行解压。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;image-20221102235706903.png&#34; alt=&#34;image-20221102235706903&#34;&gt;&lt;/p&gt;
-&lt;p&gt;然后我们添加汉化脚本到里面&lt;/p&gt;
-&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;https://screeps-cn.gitee.io/screeps-chinese-pack-release/main.js&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;defer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;此时我们进入游戏发现已经汉化完毕&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;image-20221103000423147.png&#34; alt=&#34;image-20221103000423147&#34;&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">https://www.yexingcheng.com/computer/rightPointNewMd/</guid>
             <title>如何在右键菜单下添加一个新建markdown文件选项</title>
             <link>https://www.yexingcheng.com/computer/rightPointNewMd/</link>
@@ -2345,6 +2313,31 @@ Page(&amp;#123;
 &lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;reg add &lt;span class=&#34;token string&#34;&gt;&#34;HKEY_CLASSES_ROOT\.md&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;d &lt;span class=&#34;token string&#34;&gt;&#34;Marktext.exe&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;f&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;reg add &lt;span class=&#34;token string&#34;&gt;&#34;HKEY_CLASSES_ROOT\.md\ShellNew&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;v &lt;span class=&#34;token string&#34;&gt;&#34;NullFile&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;t &lt;span class=&#34;token string&#34;&gt;&#34;REG_SZ&#34;&lt;/span&gt;  &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;f&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;reg add &lt;span class=&#34;token string&#34;&gt;&#34;HKEY_CLASSES_ROOT\Marktext.exe&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;d &lt;span class=&#34;token string&#34;&gt;&#34;Markdown&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;f&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;image-20221030041025319.png&#34; alt=&#34;image-20221030041025319&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;最终我们发现可以在右键菜单下有了这个选项&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#最终我们发现可以在右键菜单下有了这个选项&#34;&gt;#&lt;/a&gt; 最终我们发现可以在右键菜单下有了这个选项&lt;/h1&gt;
 &lt;p&gt;&lt;img data-src=&#34;image-20221030042132599.png&#34; alt=&#34;image-20221030042132599&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://www.yexingcheng.com/Screeps/chinese/</guid>
+            <title>screeps汉化（steam)</title>
+            <link>https://www.yexingcheng.com/Screeps/chinese/</link>
+            <category term="screeps" scheme="https://www.yexingcheng.com/categories/Screeps/" />
+            <category term="javascript" scheme="https://www.yexingcheng.com/tags/javascript/" />
+            <category term="screeps" scheme="https://www.yexingcheng.com/tags/screeps/" />
+            <pubDate>Sun, 30 Oct 2022 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;如果你对 screeps 有所了解的话，那么你应该曾经听说过这个游戏的 steam 版本是基于 node 和 nw.js 进行开发的，说白了就是一个套壳浏览器，本质上还是一个 web 应用。既然是 web 应用，那么就可以用我们的 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwcyUzQSUyRiUyRmdyZWFzeWZvcmsub3JnJTJGemgtQ04lMkZzY3JpcHRzJTJGNDE2NjUxLXNjcmVlcHMtY2hpbmVzZS1wYWNr&#34;&gt;web 端汉化补丁&lt;/span&gt; 进行汉化。&lt;/p&gt;
+&lt;p&gt;这里我们看到默认是全英文版本，但由于本人是英语小白，又懒得去一个一个翻译，所以就想翻译这个界面&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;image-20221102235142846.png&#34; alt=&#34;image-20221102235142846&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;汉化步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#汉化步骤&#34;&gt;#&lt;/a&gt; 汉化步骤&lt;/h1&gt;
+&lt;p&gt;实际操作也非常的简单，首先我们通过 steam 打开 screeps 的本地目录：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;image-20221102235357536.png&#34; alt=&#34;image-20221102235357536&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;image-20221102235416601.png&#34; alt=&#34;image-20221102235416601&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后，你应该可以 &lt;strong&gt;找到一个名为 package.nw 的文件&lt;/strong&gt;，这个就是游戏的源码包。&lt;/p&gt;
+&lt;p&gt;然后用压缩文件的格式打开，这里我用的是 WINRAR&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;image-20221102235616013.png&#34; alt=&#34;image-20221102235616013&#34;&gt;&lt;/p&gt;
+&lt;p&gt;打开之后我们可以 &lt;strong&gt;找到一个名为 index.html 的文件，对其右键并选择编辑&lt;/strong&gt;，同理不要进行解压。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;image-20221102235706903.png&#34; alt=&#34;image-20221102235706903&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后我们添加汉化脚本到里面&lt;/p&gt;
+&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;https://screeps-cn.gitee.io/screeps-chinese-pack-release/main.js&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;defer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;此时我们进入游戏发现已经汉化完毕&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;image-20221103000423147.png&#34; alt=&#34;image-20221103000423147&#34;&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -2496,9 +2489,9 @@ export default To;
             <title>面试题总结</title>
             <link>https://www.yexingcheng.com/interview/interview/</link>
             <category term="面试用" scheme="https://www.yexingcheng.com/categories/interview/" />
+            <category term="react" scheme="https://www.yexingcheng.com/tags/react/" />
             <category term="js" scheme="https://www.yexingcheng.com/tags/js/" />
             <category term="vue" scheme="https://www.yexingcheng.com/tags/vue/" />
-            <category term="react" scheme="https://www.yexingcheng.com/tags/react/" />
             <category term="面试" scheme="https://www.yexingcheng.com/tags/%E9%9D%A2%E8%AF%95/" />
             <pubDate>Sat, 01 Oct 2022 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;javascript&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#javascript&#34;&gt;#&lt;/a&gt; JavaScript&lt;/h1&gt;

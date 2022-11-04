@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.yexingcheng.com/interview/Currying/</loc>
+    <loc>https://www.yexingcheng.com/interview/Array.Methods/</loc>
     
-    <lastmod>2022-11-03</lastmod>
+    <lastmod>2022-11-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/interview/Array.Methods/</loc>
+    <loc>https://www.yexingcheng.com/interview/Currying/</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -378,6 +378,20 @@
   </url>
   
   <url>
+    <loc>https://www.yexingcheng.com/tags/windows/</loc>
+    <lastmod>2022-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yexingcheng.com/tags/windows11/</loc>
+    <lastmod>2022-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.yexingcheng.com/tags/javascript/</loc>
     <lastmod>2022-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -386,6 +400,20 @@
   
   <url>
     <loc>https://www.yexingcheng.com/tags/screeps/</loc>
+    <lastmod>2022-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yexingcheng.com/tags/react/</loc>
+    <lastmod>2022-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yexingcheng.com/tags/router/</loc>
     <lastmod>2022-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -413,28 +441,7 @@
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/tags/react/</loc>
-    <lastmod>2022-11-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.yexingcheng.com/tags/%E9%9D%A2%E8%AF%95/</loc>
-    <lastmod>2022-11-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.yexingcheng.com/tags/windows/</loc>
-    <lastmod>2022-11-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.yexingcheng.com/tags/windows11/</loc>
     <lastmod>2022-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -456,13 +463,6 @@
   
   <url>
     <loc>https://www.yexingcheng.com/tags/vant/</loc>
-    <lastmod>2022-11-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.yexingcheng.com/tags/router/</loc>
     <lastmod>2022-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -492,14 +492,14 @@
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/categories/Screeps/</loc>
+    <loc>https://www.yexingcheng.com/categories/computer/</loc>
     <lastmod>2022-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/categories/interview/</loc>
+    <loc>https://www.yexingcheng.com/categories/Screeps/</loc>
     <lastmod>2022-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -513,7 +513,7 @@
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/categories/computer/</loc>
+    <loc>https://www.yexingcheng.com/categories/interview/</loc>
     <lastmod>2022-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
