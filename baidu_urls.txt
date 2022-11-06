@@ -1,1 +1,1 @@
-https://www.yexingcheng.com/interview/Array.Methods/
+https://www.yexingcheng.com/interview/Variable-recycling/
