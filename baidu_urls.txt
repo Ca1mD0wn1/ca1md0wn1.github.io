@@ -1,1 +1,1 @@
-https://www.yexingcheng.com/interview/Variable-recycling/
+https://www.yexingcheng.com/interview/wrapper-object/
