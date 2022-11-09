@@ -1,21 +1,4 @@
-<!-- build time:Wed Nov 09 2022 02:32:54 GMT+0800 (中国标准时间) --><!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#FFF"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" type="application/rss+xml" title="永不陨落的星辰" href="https://www.yexingcheng.com/rss.xml"><link rel="alternate" type="application/atom+xml" title="永不陨落的星辰" href="https://www.yexingcheng.com/atom.xml"><link rel="alternate" type="application/json" title="永不陨落的星辰" href="https://www.yexingcheng.com/feed.json"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/css/app.css?v=0.2.5"><meta name="keywords" content="vue,TypeScript"><link rel="canonical" href="https://www.yexingcheng.com/vue-mobile/14/"><title>vue-mobile项目开发流程第十四部分(实现kind和user页面) - vue3移动端项目开发 | 永不陨落的星辰 = 永不陨落的星辰</title><meta name="generator" content="Hexo 6.3.0"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">vue-mobile项目开发流程第十四部分(实现kind和user页面)</h1><div class="meta"><span class="item" title="创建时间：2022-07-14 00:00:00"><span class="icon"><i class="ic i-calendar"></i> </span><span class="text">发表于</span> <time itemprop="dateCreated datePublished" datetime="2022-07-14T00:00:00+08:00">2022-07-14</time> </span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i> </span><span class="text">本文字数</span> <span>35k</span> <span class="text">字</span> </span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i> </span><span class="text">阅读时长</span> <span>32 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span> <span class="line"></span> <span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">永不陨落的星辰</a></li></ul><ul class="right"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div id="imgs" class="pjax"><ul><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicis081o9j20zk0m8dmr.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"/><use xlink:href="#gentle-wave" x="48" y="3"/><use xlink:href="#gentle-wave" x="48" y="5"/><use xlink:href="#gentle-wave" x="48" y="7"/></g></svg></div><main><div class="inner"><div id="main" class="pjax"><div class="article wrap"><div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i> <span><a href="/">首页</a></span><i class="ic i-angle-right"></i> <span class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/vue3%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" itemprop="item" rel="index" title="分类于 vue3移动端项目开发"><span itemprop="name">vue3移动端项目开发</span></a><meta itemprop="position" content="1"></span></div><article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://www.yexingcheng.com/vue-mobile/14/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="/images/avatar.jpg"><meta itemprop="name" content="叶星辰"><meta itemprop="description" content=", 温柔正确的人总是难以生存，因为这个世界既不温柔 也不正确"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="永不陨落的星辰"></span><div class="body md" itemprop="articleBody"><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><pre><code class="ts">// src/api/kind.ts
-import request from &#39;../service/request&#39;
-
-// 分类列表
-export function getCategoryListData () &#123;
-  return request.get(&#39;/pro/categorylist&#39;)
-&#125;
-
-// 分类下品牌列表
-export function getCategoryBrandListData (params: &#123; category: string &#125;) &#123;
-  return request.get(&#39;/pro/categorybrandlist&#39;, &#123; params &#125;)
-&#125;
-
-// 分类下品牌的产品列表
-export function getCategoryBrandProListData (params: &#123; category: string, brand: string &#125;) &#123;
-  return request.get(&#39;/pro/categorybrandprolist&#39;, &#123; params &#125;)
-&#125;
-</code></pre><pre><code class="vue">&lt;!-- src/views/kind/IndexView.vue --&gt;
+<!-- build time:Wed Nov 09 2022 11:12:10 GMT+0800 (中国标准时间) --><!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#FFF"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" type="application/rss+xml" title="永不陨落的星辰" href="https://www.yexingcheng.com/rss.xml"><link rel="alternate" type="application/atom+xml" title="永不陨落的星辰" href="https://www.yexingcheng.com/atom.xml"><link rel="alternate" type="application/json" title="永不陨落的星辰" href="https://www.yexingcheng.com/feed.json"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/css/app.css?v=0.2.5"><meta name="keywords" content="vue,TypeScript"><link rel="canonical" href="https://www.yexingcheng.com/vue-mobile/14/"><title>vue-mobile项目开发流程第十四部分(实现kind和user页面) - vue3移动端项目开发 | 永不陨落的星辰 = 永不陨落的星辰</title><meta name="generator" content="Hexo 6.3.0"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">vue-mobile项目开发流程第十四部分(实现kind和user页面)</h1><div class="meta"><span class="item" title="创建时间：2022-07-14 00:00:00"><span class="icon"><i class="ic i-calendar"></i> </span><span class="text">发表于</span> <time itemprop="dateCreated datePublished" datetime="2022-07-14T00:00:00+08:00">2022-07-14</time> </span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i> </span><span class="text">本文字数</span> <span>33k</span> <span class="text">字</span> </span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i> </span><span class="text">阅读时长</span> <span>30 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span> <span class="line"></span> <span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">永不陨落的星辰</a></li></ul><ul class="right"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div id="imgs" class="pjax"><ul><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicit31ffoj20zk0m8naf.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipew8gmvyj20zk0m87wh.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclize41wj20zk0m87gk.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclgi503lj20zk0m8hdt.jpg"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"/><use xlink:href="#gentle-wave" x="48" y="3"/><use xlink:href="#gentle-wave" x="48" y="5"/><use xlink:href="#gentle-wave" x="48" y="7"/></g></svg></div><main><div class="inner"><div id="main" class="pjax"><div class="article wrap"><div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i> <span><a href="/">首页</a></span><i class="ic i-angle-right"></i> <span class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/vue3%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" itemprop="item" rel="index" title="分类于 vue3移动端项目开发"><span itemprop="name">vue3移动端项目开发</span></a><meta itemprop="position" content="1"></span></div><article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://www.yexingcheng.com/vue-mobile/14/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="/images/avatar.jpg"><meta itemprop="name" content="叶星辰"><meta itemprop="description" content=", 温柔正确的人总是难以生存，因为这个世界既不温柔 也不正确"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="永不陨落的星辰"></span><div class="body md" itemprop="articleBody"><h3 id="分类"><a class="anchor" href="#分类">#</a> 分类</h3><figure class="highlight ts"><figcaption data-lang="TypeScript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">// src/api/kind.ts</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> request <span class="token keyword">from</span> <span class="token string">'../service/request'</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment">// 分类列表</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getCategoryListData</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/pro/categorylist'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token comment">// 分类下品牌列表</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getCategoryBrandListData</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> category<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/pro/categorybrandlist'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> params <span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="13"></td><td><pre></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token comment">// 分类下品牌的产品列表</span></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getCategoryBrandProListData</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> category<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> brand<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/pro/categorybrandprolist'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> params <span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="17"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><pre><code class="language-vue">&lt;!-- src/views/kind/IndexView.vue --&gt;
 &lt;template&gt;
   &lt;header class=&quot;header&quot;&gt;
     &lt;van-nav-bar   
@@ -46,8 +29,8 @@ export function getCategoryBrandProListData (params: &#123; category: string, br
 &lt;/template&gt;
 
 &lt;script lang=&quot;ts&quot;&gt;
-  import &#123; defineComponent &#125; from &#39;vue&#39;;
-  import &#123; getCategoryListData, getCategoryBrandListData &#125; from &#39;@/api/kind&#39;
+  import &#123; defineComponent &#125; from 'vue';
+  import &#123; getCategoryListData, getCategoryBrandListData &#125; from '@/api/kind'
   interface IBrand &#123;
     brand: string
   &#125;
@@ -78,7 +61,7 @@ export function getCategoryBrandProListData (params: &#123; category: string, br
         &#125;)
       &#125;,
       toSearchList (brand: string) &#123;
-        this.$router.push(&#39;/result?category=&#39; + this.categoryList[this.active] + &#39;&amp;brand=&#39; + brand)
+        this.$router.push('/result?category=' + this.categoryList[this.active] + '&amp;brand=' + brand)
       &#125;
     &#125;
   &#125;)
@@ -112,7 +95,7 @@ export function getCategoryBrandProListData (params: &#123; category: string, br
     text-align: center;
   &#125;
 &lt;/style&gt;
-</code></pre><pre><code class="vue">&lt;!-- src/views/kind/ResultView.vue --&gt;
+</code></pre><pre><code class="language-vue">&lt;!-- src/views/kind/ResultView.vue --&gt;
 &lt;template&gt;
   &lt;header class=&quot;header&quot;&gt;
     &lt;ul&gt;
@@ -158,10 +141,10 @@ export function getCategoryBrandProListData (params: &#123; category: string, br
 &lt;/template&gt;
 
 &lt;script lang=&quot;ts&quot;&gt;
-  import &#123; defineComponent &#125; from &#39;vue&#39;;
-  import &#123; getCategoryBrandProListData &#125; from &#39;@/api/kind&#39;
-  import type &#123; IPro &#125; from &#39;../home/home&#39;;
-  import type &#123; DropdownItemInstance &#125; from &#39;vant&#39;;
+  import &#123; defineComponent &#125; from 'vue';
+  import &#123; getCategoryBrandProListData &#125; from '@/api/kind'
+  import type &#123; IPro &#125; from '../home/home';
+  import type &#123; DropdownItemInstance &#125; from 'vant';
 
   interface IData &#123;
     keyword: string
@@ -177,14 +160,14 @@ export function getCategoryBrandProListData (params: &#123; category: string, br
   export default defineComponent(&#123;
     data (): IData &#123;
       return &#123;
-        keyword: &#39;&#39;,
+        keyword: '',
         searchList: [],
         initList: [],
         list: [],
         options: [
-          &#123; text: &#39;全部商品&#39;, value: 0 &#125;,
-          &#123; text: &#39;价格升序&#39;, value: 1 &#125;,
-          &#123; text: &#39;价格降序&#39;, value: -1 &#125;,
+          &#123; text: '全部商品', value: 0 &#125;,
+          &#123; text: '价格升序', value: 1 &#125;,
+          &#123; text: '价格降序', value: -1 &#125;,
         ],
         value: 0,
         min: &quot;&quot;,
@@ -201,8 +184,8 @@ export function getCategoryBrandProListData (params: &#123; category: string, br
     &#125;,
     methods: &#123;
       submit () &#123;
-        if (localStorage.getItem(&#39;searchList&#39;)) &#123;
-          this.list = JSON.parse(localStorage.getItem(&#39;searchList&#39;)!)
+        if (localStorage.getItem('searchList')) &#123;
+          this.list = JSON.parse(localStorage.getItem('searchList')!)
           const index = this.list.findIndex(item =&gt; item === this.keyword)
           if (index !== -1) &#123;
             this.list.splice(index, 1)
@@ -214,7 +197,7 @@ export function getCategoryBrandProListData (params: &#123; category: string, br
           arr.unshift(this.keyword)
           this.list = arr
         &#125;
-        localStorage.setItem(&#39;searchList&#39;, JSON.stringify(this.list))
+        localStorage.setItem('searchList', JSON.stringify(this.list))
         getCategoryBrandProListData(&#123; brand: this.keyword, category: (this.$route.query.category as string) &#125;).then(res =&gt; &#123;
           this.searchList = res.data.data
           this.initList = JSON.parse(JSON.stringify(res.data.data))
@@ -238,23 +221,23 @@ export function getCategoryBrandProListData (params: &#123; category: string, br
         &#125;
       &#125;,
       onConfirm () &#123;
-        if (this.min === &#39;&#39;) &#123;
-          this.min = &#39;0&#39;
+        if (this.min === '') &#123;
+          this.min = '0'
         &#125;
-        if (this.max === &#39;&#39;) &#123;
-          this.max = &#39;9999999&#39;
+        if (this.max === '') &#123;
+          this.max = '9999999'
         &#125;
         const arr = this.searchList.filter(item =&gt; &#123;
           return item.originprice &gt;= Number(this.min) &amp;&amp; item.originprice &lt;= Number(this.max)
         &#125;)
         console.log(arr)
         this.searchList = arr;
-        // this.min = &#39;&#39;;
-        // this.max = &#39;&#39;;
+        // this.min = '';
+        // this.max = '';
         (this.$refs.item as DropdownItemInstance ).toggle()
       &#125;,
       toDetail (proid: string) &#123;
-        this.$router.push(&#39;/detail/&#39; + proid)
+        this.$router.push('/detail/' + proid)
       &#125;
     &#125;
   &#125;)
@@ -295,7 +278,7 @@ export function getCategoryBrandProListData (params: &#123; category: string, br
     display: flex;
   &#125;
 &lt;/style&gt;
-</code></pre><h3 id="14-个人中心"><a href="#14-个人中心" class="headerlink" title="14 个人中心"></a>14 个人中心</h3><h4 id="14-1-设置页面"><a href="#14-1-设置页面" class="headerlink" title="14.1 设置页面"></a>14.1 设置页面</h4><pre><code class="vue">&lt;!-- src/views/user/SetView.vue --&gt;
+</code></pre><h3 id="14-个人中心"><a class="anchor" href="#14-个人中心">#</a> 14 个人中心</h3><h4 id="141-设置页面"><a class="anchor" href="#141-设置页面">#</a> 14.1 设置页面</h4><pre><code class="language-vue">&lt;!-- src/views/user/SetView.vue --&gt;
 &lt;template&gt;
   &lt;header class=&quot;header&quot;&gt;
     &lt;van-nav-bar   
@@ -318,7 +301,7 @@ export function getCategoryBrandProListData (params: &#123; category: string, br
 &lt;/template&gt;
 
 &lt;script lang=&quot;ts&quot;&gt;
-  import &#123; defineComponent &#125; from &#39;vue&#39;;
+  import &#123; defineComponent &#125; from 'vue';
   export default defineComponent(&#123;
   &#125;)
 &lt;/script&gt;
@@ -338,7 +321,7 @@ export function getCategoryBrandProListData (params: &#123; category: string, br
     margin-top: 50px;
   &#125;
 &lt;/style&gt;
-</code></pre><h4 id="14-2-个人中心页面"><a href="#14-2-个人中心页面" class="headerlink" title="14.2 个人中心页面"></a>14.2 个人中心页面</h4><pre><code class="vue">&lt;!-- src/views/user/IndexView.vue --&gt;
+</code></pre><h4 id="142-个人中心页面"><a class="anchor" href="#142-个人中心页面">#</a> 14.2 个人中心页面</h4><pre><code class="language-vue">&lt;!-- src/views/user/IndexView.vue --&gt;
 &lt;template&gt;
   &lt;header class=&quot;header&quot;&gt;
     &lt;van-nav-bar   
@@ -376,8 +359,8 @@ export function getCategoryBrandProListData (params: &#123; category: string, br
 &lt;/template&gt;
 
 &lt;script lang=&quot;ts&quot;&gt;
-  import &#123; defineComponent &#125; from &#39;vue&#39;;
-  import logo from &#39;@/assets/logo.png&#39;
+  import &#123; defineComponent &#125; from 'vue';
+  import logo from '@/assets/logo.png'
   export default defineComponent(&#123;
     data () &#123;
       return &#123;
@@ -424,7 +407,7 @@ export function getCategoryBrandProListData (params: &#123; category: string, br
     justify-content: center;
   &#125;
 &lt;/style&gt;
-</code></pre><h4 id="14-3-地址页面"><a href="#14-3-地址页面" class="headerlink" title="14.3 地址页面"></a>14.3 地址页面</h4><pre><code class="vue">&lt;!-- src/views/user/AddressView.vue --&gt;
+</code></pre><h4 id="143-地址页面"><a class="anchor" href="#143-地址页面">#</a> 14.3 地址页面</h4><pre><code class="language-vue">&lt;!-- src/views/user/AddressView.vue --&gt;
 &lt;template&gt;
   &lt;header class=&quot;header&quot;&gt;&lt;van-nav-bar
       title=&quot;地址列表&quot;
@@ -441,8 +424,8 @@ export function getCategoryBrandProListData (params: &#123; category: string, br
 &lt;/template&gt;
 
 &lt;script lang=&quot;ts&quot;&gt;
-import &#123; getAddressList &#125; from &#39;@/api/address&#39;;
-import &#123; defineComponent &#125; from &#39;vue&#39;;
+import &#123; getAddressList &#125; from '@/api/address';
+import &#123; defineComponent &#125; from 'vue';
 
   export default defineComponent(&#123;
     data () &#123;
@@ -451,7 +434,7 @@ import &#123; defineComponent &#125; from &#39;vue&#39;;
       &#125;
     &#125;,
     mounted () &#123;
-      getAddressList(&#123; userid: localStorage.getItem(&#39;userid&#39;)! &#125;).then(res =&gt; &#123;
+      getAddressList(&#123; userid: localStorage.getItem('userid')! &#125;).then(res =&gt; &#123;
         res.data.data.forEach((item: any) =&gt; &#123;
           item.id = item.addressid
           item.address = this.getAddress(item)
@@ -467,7 +450,7 @@ import &#123; defineComponent &#125; from &#39;vue&#39;;
         const county = item.county
         const addressDetail = item.addressDetail
 
-        let str = &#39;&#39;
+        let str = ''
         if (province === city) &#123;
           str += province + county + addressDetail
         &#125; else &#123;
@@ -476,14 +459,14 @@ import &#123; defineComponent &#125; from &#39;vue&#39;;
         return str
       &#125;,
       onAdd () &#123;
-        this.$router.push(&#39;/userAddAddress&#39;)
+        this.$router.push('/userAddAddress')
       &#125;
     &#125;
   &#125;)
 &lt;/script&gt;
 
 &lt;style lang=&quot;scss&quot;&gt;&lt;/style&gt;
-</code></pre><pre><code class="vue">&lt;!-- src/views/user/AddAddressView.vue --&gt;
+</code></pre><pre><code class="language-vue">&lt;!-- src/views/user/AddAddressView.vue --&gt;
 &lt;template&gt;
   &lt;header class=&quot;header&quot;&gt;&lt;van-nav-bar
       title=&quot;添加地址&quot;
@@ -494,16 +477,16 @@ import &#123; defineComponent &#125; from &#39;vue&#39;;
     &lt;van-address-edit
       :area-list=&quot;areaList&quot;
       show-set-default
-      :area-columns-placeholder=&quot;[&#39;请选择&#39;, &#39;请选择&#39;, &#39;请选择&#39;]&quot;
+      :area-columns-placeholder=&quot;['请选择', '请选择', '请选择']&quot;
       @save=&quot;onSave&quot;
     /&gt;
   &lt;/div&gt;
 &lt;/template&gt;
 
 &lt;script lang=&quot;ts&quot;&gt;
-  import &#123; defineComponent &#125; from &#39;vue&#39;;
-  import &#123; areaList &#125; from &#39;@vant/area-data&#39;;
-  import &#123; addAddRessData &#125; from &#39;@/api/address&#39;;
+  import &#123; defineComponent &#125; from 'vue';
+  import &#123; areaList &#125; from '@vant/area-data';
+  import &#123; addAddRessData &#125; from '@/api/address';
   export default defineComponent(&#123;
     data () &#123;
       return &#123;
@@ -513,7 +496,7 @@ import &#123; defineComponent &#125; from &#39;vue&#39;;
     methods: &#123;
       onSave (content: any) &#123;
         console.log(content)
-        content.userid = localStorage.getItem(&#39;userid&#39;)!
+        content.userid = localStorage.getItem('userid')!
         addAddRessData(content).then(res =&gt; &#123;
           console.log(res.data) // 添加地址成功
           this.$router.back()
@@ -524,7 +507,7 @@ import &#123; defineComponent &#125; from &#39;vue&#39;;
 &lt;/script&gt;
 
 &lt;style lang=&quot;scss&quot;&gt;&lt;/style&gt;
-</code></pre><h4 id="14-4-收藏夹页面"><a href="#14-4-收藏夹页面" class="headerlink" title="14.4 收藏夹页面"></a>14.4 收藏夹页面</h4><pre><code class="vue">&lt;!-- src/views/user/FavoriteView.vue --&gt;
+</code></pre><h4 id="144-收藏夹页面"><a class="anchor" href="#144-收藏夹页面">#</a> 14.4 收藏夹页面</h4><pre><code class="language-vue">&lt;!-- src/views/user/FavoriteView.vue --&gt;
 &lt;template&gt;
   &lt;header class=&quot;header&quot;&gt;
     &lt;van-nav-bar   
@@ -543,7 +526,7 @@ import &#123; defineComponent &#125; from &#39;vue&#39;;
 &lt;/template&gt;
 
 &lt;script lang=&quot;ts&quot;&gt;
-  import &#123; defineComponent &#125; from &#39;vue&#39;;
+  import &#123; defineComponent &#125; from 'vue';
   export default defineComponent(&#123;
     data () &#123;
       return &#123;
@@ -565,7 +548,7 @@ import &#123; defineComponent &#125; from &#39;vue&#39;;
     &#125;
   &#125;
 &lt;/style&gt;
-</code></pre><h4 id="14-5-关于我们"><a href="#14-5-关于我们" class="headerlink" title="14.5 关于我们"></a>14.5 关于我们</h4><pre><code class="vue">&lt;!-- src/views/user/AboutView.vue --&gt;
+</code></pre><h4 id="145-关于我们"><a class="anchor" href="#145-关于我们">#</a> 14.5 关于我们</h4><pre><code class="language-vue">&lt;!-- src/views/user/AboutView.vue --&gt;
 &lt;template&gt;
   &lt;header class=&quot;header&quot;&gt;
     &lt;van-nav-bar   
@@ -584,7 +567,7 @@ import &#123; defineComponent &#125; from &#39;vue&#39;;
 &lt;/template&gt;
 
 &lt;script lang=&quot;ts&quot;&gt;
-  import &#123; defineComponent &#125; from &#39;vue&#39;;
+  import &#123; defineComponent &#125; from 'vue';
   export default defineComponent(&#123;
     data () &#123;
       return &#123;
@@ -606,7 +589,7 @@ import &#123; defineComponent &#125; from &#39;vue&#39;;
     &#125;
   &#125;
 &lt;/style&gt;
-</code></pre><h4 id="14-6-订单页面"><a href="#14-6-订单页面" class="headerlink" title="14.6 订单页面"></a>14.6 订单页面</h4><pre><code class="vue">&lt;!-- src/views/user/OrderView.vue --&gt;
+</code></pre><h4 id="146-订单页面"><a class="anchor" href="#146-订单页面">#</a> 14.6 订单页面</h4><pre><code class="language-vue">&lt;!-- src/views/user/OrderView.vue --&gt;
 &lt;template&gt;
   &lt;header class=&quot;header&quot;&gt;
     &lt;van-nav-bar   
@@ -629,7 +612,7 @@ import &#123; defineComponent &#125; from &#39;vue&#39;;
 &lt;/template&gt;
 
 &lt;script lang=&quot;ts&quot;&gt;
-  import &#123; defineComponent &#125; from &#39;vue&#39;;
+  import &#123; defineComponent &#125; from 'vue';
   export default defineComponent(&#123;
     data () &#123;
       return &#123;
@@ -657,228 +640,7 @@ import &#123; defineComponent &#125; from &#39;vue&#39;;
     margin-top: 50px;
   &#125;
 &lt;/style&gt;
-</code></pre><h4 id="14-7-设置路由"><a href="#14-7-设置路由" class="headerlink" title="14.7 设置路由"></a>14.7 设置路由</h4><pre><code class="ts">// src/router/index.ts
-// 1.引入 创建路由的模块 以及 路由历史记录模式的模块 
-// 路由的历史模式：
-// createWebHistory  HTML5模式  /home /kind /cart /user  需要后端配合
-// createWebHashHistory Hash 模式  /#/home   /#/kind  /#/cart  /#/user
-import &#123; createRouter, createWebHistory &#125; from &#39;vue-router&#39;
-import type &#123; RouteRecordRaw, Router &#125; from &#39;vue-router&#39; // 路由规则的类型 ---- 路由规则的类型注解
-
-// 2.引入页面组件
-import Footer from &#39;../components/FooterComponent.vue&#39;
-import HomeView from &#39;./../views/home/IndexView.vue&#39;
-import KindView from &#39;./../views/kind/IndexView.vue&#39;
-import ResultView from &#39;./../views/kind/ResultView.vue&#39;
-import CartView from &#39;./../views/cart/IndexView.vue&#39;
-import UserView from &#39;./../views/user/IndexView.vue&#39;
-import UserOrderView from &#39;../views/user/OrderView.vue&#39; // +++++++++
-import UserAddressView from &#39;../views/user/AddressView.vue&#39; // +++++++++
-import UserAddAddressView from &#39;../views/user/AddAddressView.vue&#39; // +++++++++
-import UserFavoriteView from &#39;../views/user/FavoriteView.vue&#39; // +++++++++
-import AboutView from &#39;../views/user/AboutView.vue&#39; // +++++++++
-import SetView from &#39;./../views/user/SetView.vue&#39; // +++++++++
-import DetailView from &#39;../views/detail/IndexView.vue&#39;
-import RegisterView from &#39;../views/register/IndexView.vue&#39;
-import CheckTelComponent from &#39;../views/register/components/CheckTelComponent.vue&#39;
-import SendTelCodeComponent from &#39;../views/register/components/SendTelCodeComponent.vue&#39;
-import SetPasswordComponent from &#39;../views/register/components/SetPasswordComponent.vue&#39;
-import LoginView from &#39;../views/login/IndexView.vue&#39;
-import OrderView from &#39;../views/order/IndexView.vue&#39;
-import OrderAddressListView from &#39;../views/order/AddressListView.vue&#39;
-import OrderAddAddressView from &#39;../views/order/AddAddressView.vue&#39;
-import SearchView from &#39;../views/search/IndexView.vue&#39;
-import SearchResultView from &#39;../views/search/SearchResultView.vue&#39;
-
-// 3.构建路由的规则
-const routes: RouteRecordRaw[] = [
-  &#123; // 路由的重定向
-    path: &#39;/&#39;,
-    redirect: &#39;/home&#39;
-  &#125;,
-  &#123;
-    path: &#39;/home&#39;, // 地址栏地址 - 路由
-    name: &#39;home&#39;, // 命名路由  ---   唯一性
-    // component: HomeView // 路由映射的页面组件
-    components: &#123;
-      default: HomeView,
-      footer: Footer
-    &#125;
-  &#125;,
-  &#123;
-    path: &#39;/kind&#39;, 
-    name: &#39;kind&#39;,
-    // component: KindView 
-    components: &#123;
-      default: KindView,
-      footer: Footer
-    &#125;
-  &#125;,
-  &#123;
-    path: &#39;/result&#39;,
-    name: &#39;result&#39;,
-    component: ResultView
-  &#125;,
-  &#123;
-    path: &#39;/cart&#39;, 
-    name: &#39;cart&#39;,
-    // component: CartView 
-    components: &#123;
-      default: CartView,
-      footer: Footer
-    &#125;
-  &#125;,
-  &#123;
-    path: &#39;/user&#39;, 
-    name: &#39;user&#39;,
-    // component: UserView 
-    components: &#123;
-      default: UserView,
-      footer: Footer
-    &#125;
-  &#125;,
-  &#123;// +++++++++
-    path: &#39;/set&#39;, 
-    name: &#39;set&#39;,
-    component: SetView
-  &#125;,
-  &#123;// +++++++++
-    path: &#39;/userOrder&#39;, 
-    name: &#39;userOrder&#39;,
-    component: UserOrderView
-  &#125;,
-  &#123;// +++++++++
-    path: &#39;/userAddress&#39;, 
-    name: &#39;userAddress&#39;,
-    component: UserAddressView
-  &#125;,
-  &#123;// +++++++++
-    path: &#39;/userAddAddress&#39;,
-    name: &#39;userAddAddress&#39;,
-    component: UserAddAddressView
-  &#125;,
-  &#123;// +++++++++
-    path: &#39;/userFavorite&#39;,
-    name: &#39;userFavorite&#39;,
-    component: UserFavoriteView
-  &#125;,
-  &#123; // +++++++++
-    path: &#39;/about&#39;,
-    name: &#39;about&#39;,
-    component: AboutView
-  &#125;,
-  &#123;
-    path: &#39;/detail/:proid&#39;,
-    name: &#39;detail&#39;,
-    // component: DetailView
-    components: &#123;
-      default: DetailView
-    &#125;
-  &#125;,
-  &#123;
-    path: &#39;/register&#39;,
-    name: &#39;register&#39;,
-    redirect: &#39;/register/index&#39;,
-    component: RegisterView,
-    children: [
-      &#123;
-        path: &#39;index&#39;,
-        component: CheckTelComponent
-      &#125;,
-      &#123;
-        path: &#39;sms&#39;,
-        component: SendTelCodeComponent
-      &#125;,
-      &#123;
-        path: &#39;pwd&#39;,
-        component: SetPasswordComponent
-      &#125;
-    ]
-  &#125;,
-  &#123;
-    path: &#39;/login&#39;,
-    name: &#39;login&#39;,
-    component: LoginView
-  &#125;,
-  &#123;
-    path: &#39;/order&#39;,
-    name: &#39;order&#39;,
-    component: OrderView
-  &#125;,
-  &#123;
-    path: &#39;/orderAddress&#39;,
-    name: &#39;orderAddress&#39;,
-    component: OrderAddressListView
-  &#125;,
-  &#123;
-    path: &#39;/orderAddAddress&#39;,
-    name: &#39;orderAddAddress&#39;,
-    component: OrderAddAddressView
-  &#125;,
-  &#123;
-    path: &#39;/search&#39;,
-    name: &#39;search&#39;,
-    component: SearchView
-  &#125;,
-  &#123;
-    path: &#39;/searchResult&#39;,
-    name: &#39;searchResult&#39;,
-    component: SearchResultView
-  &#125;
-]
-
-// 4.生成路由
-const router: Router = createRouter(&#123;
-  // vue2 vue-router3 history: &#39;history&#39; | &#39;hash&#39; 
-  history: createWebHistory(),
-  routes // routes: routes 简写形式
-&#125;)
-
-// 5.暴露路由
-export default router
-</code></pre><h4 id="14-8-更新用户名以及密码"><a href="#14-8-更新用户名以及密码" class="headerlink" title="14.8 更新用户名以及密码"></a>14.8 更新用户名以及密码</h4><pre><code class="ts">// src/api/user.ts
-import request from &#39;./../service/request&#39;
-
-// 检测手机号是否被注册过
-export function doCheckPhone (params: &#123; tel: string &#125;) &#123;
-  return request.post(&#39;/user/docheckphone&#39;, params)
-&#125;
-
-// 发送短信验证码
-export function doSendMsgCode (params: &#123; tel: string &#125;) &#123;
-  return request.post(&#39;/user/dosendmsgcode&#39;, params)
-&#125;
-
-// 验证验证码
-export function doCheckCode (params: &#123; tel: string, telcode: string &#125;) &#123;
-  return request.post(&#39;/user/docheckcode&#39;, params)
-&#125;
-
-// 设置密码完成注册
-export function doFinishRegister (params: &#123; tel: string, password: string &#125;) &#123;
-  return request.post(&#39;/user/dofinishregister&#39;, params)
-&#125;
-
-// 登录
-export function doLogin (params: &#123; loginname: string, password: string &#125;) &#123;
-  return request.post(&#39;/user/login&#39;, params)
-&#125;
-
-// 获取用户信息
-export function getUserInfo (params: &#123; userid: string &#125;) &#123;
-  return request.get(&#39;/user/info&#39;, &#123; params &#125;)
-&#125;
-
-// 更新用户名
-export function updateUsername (params: &#123; userid: string, username: string &#125;) &#123;
-  return request.get(&#39;/user/bindusername&#39;, &#123;params&#125;)
-&#125;
-
-// 更新密码
-export function updatePassword (params: &#123; userid: string, oldpassword: string, newpassword: string &#125;) &#123;
-  return request.get(&#39;/user/updatePassword&#39;, &#123;params&#125;)
-&#125;
-</code></pre><pre><code class="vue">&lt;!-- src/views/user/SetView.vue --&gt;
+</code></pre><h4 id="147-设置路由"><a class="anchor" href="#147-设置路由">#</a> 14.7 设置路由</h4><figure class="highlight ts"><figcaption data-lang="TypeScript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">// src/router/index.ts</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment">// 1. 引入 创建路由的模块 以及 路由历史记录模式的模块 </span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment">// 路由的历史模式：</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment">//createWebHistory  HTML5 模式  /home/kind/cart/user  需要后端配合</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token comment">//createWebHashHistory Hash 模式  /#/home   /#/kind  /#/cart  /#/user</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> createRouter<span class="token punctuation">,</span> createWebHistory <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'vue-router'</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">import</span> <span class="token keyword">type</span> <span class="token punctuation">&#123;</span> RouteRecordRaw<span class="token punctuation">,</span> Router <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'vue-router'</span> <span class="token comment">// 路由规则的类型 ---- 路由规则的类型注解</span></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token comment">// 2. 引入页面组件</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token keyword">import</span> Footer <span class="token keyword">from</span> <span class="token string">'../components/FooterComponent.vue'</span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token keyword">import</span> HomeView <span class="token keyword">from</span> <span class="token string">'./../views/home/IndexView.vue'</span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token keyword">import</span> KindView <span class="token keyword">from</span> <span class="token string">'./../views/kind/IndexView.vue'</span></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token keyword">import</span> ResultView <span class="token keyword">from</span> <span class="token string">'./../views/kind/ResultView.vue'</span></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token keyword">import</span> CartView <span class="token keyword">from</span> <span class="token string">'./../views/cart/IndexView.vue'</span></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token keyword">import</span> UserView <span class="token keyword">from</span> <span class="token string">'./../views/user/IndexView.vue'</span></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token keyword">import</span> UserOrderView <span class="token keyword">from</span> <span class="token string">'../views/user/OrderView.vue'</span> <span class="token comment">// +++++++++</span></pre></td></tr><tr><td data-num="17"></td><td><pre><span class="token keyword">import</span> UserAddressView <span class="token keyword">from</span> <span class="token string">'../views/user/AddressView.vue'</span> <span class="token comment">// +++++++++</span></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token keyword">import</span> UserAddAddressView <span class="token keyword">from</span> <span class="token string">'../views/user/AddAddressView.vue'</span> <span class="token comment">// +++++++++</span></pre></td></tr><tr><td data-num="19"></td><td><pre><span class="token keyword">import</span> UserFavoriteView <span class="token keyword">from</span> <span class="token string">'../views/user/FavoriteView.vue'</span> <span class="token comment">// +++++++++</span></pre></td></tr><tr><td data-num="20"></td><td><pre><span class="token keyword">import</span> AboutView <span class="token keyword">from</span> <span class="token string">'../views/user/AboutView.vue'</span> <span class="token comment">// +++++++++</span></pre></td></tr><tr><td data-num="21"></td><td><pre><span class="token keyword">import</span> SetView <span class="token keyword">from</span> <span class="token string">'./../views/user/SetView.vue'</span> <span class="token comment">// +++++++++</span></pre></td></tr><tr><td data-num="22"></td><td><pre><span class="token keyword">import</span> DetailView <span class="token keyword">from</span> <span class="token string">'../views/detail/IndexView.vue'</span></pre></td></tr><tr><td data-num="23"></td><td><pre><span class="token keyword">import</span> RegisterView <span class="token keyword">from</span> <span class="token string">'../views/register/IndexView.vue'</span></pre></td></tr><tr><td data-num="24"></td><td><pre><span class="token keyword">import</span> CheckTelComponent <span class="token keyword">from</span> <span class="token string">'../views/register/components/CheckTelComponent.vue'</span></pre></td></tr><tr><td data-num="25"></td><td><pre><span class="token keyword">import</span> SendTelCodeComponent <span class="token keyword">from</span> <span class="token string">'../views/register/components/SendTelCodeComponent.vue'</span></pre></td></tr><tr><td data-num="26"></td><td><pre><span class="token keyword">import</span> SetPasswordComponent <span class="token keyword">from</span> <span class="token string">'../views/register/components/SetPasswordComponent.vue'</span></pre></td></tr><tr><td data-num="27"></td><td><pre><span class="token keyword">import</span> LoginView <span class="token keyword">from</span> <span class="token string">'../views/login/IndexView.vue'</span></pre></td></tr><tr><td data-num="28"></td><td><pre><span class="token keyword">import</span> OrderView <span class="token keyword">from</span> <span class="token string">'../views/order/IndexView.vue'</span></pre></td></tr><tr><td data-num="29"></td><td><pre><span class="token keyword">import</span> OrderAddressListView <span class="token keyword">from</span> <span class="token string">'../views/order/AddressListView.vue'</span></pre></td></tr><tr><td data-num="30"></td><td><pre><span class="token keyword">import</span> OrderAddAddressView <span class="token keyword">from</span> <span class="token string">'../views/order/AddAddressView.vue'</span></pre></td></tr><tr><td data-num="31"></td><td><pre><span class="token keyword">import</span> SearchView <span class="token keyword">from</span> <span class="token string">'../views/search/IndexView.vue'</span></pre></td></tr><tr><td data-num="32"></td><td><pre><span class="token keyword">import</span> SearchResultView <span class="token keyword">from</span> <span class="token string">'../views/search/SearchResultView.vue'</span></pre></td></tr><tr><td data-num="33"></td><td><pre></pre></td></tr><tr><td data-num="34"></td><td><pre><span class="token comment">// 3. 构建路由的规则</span></pre></td></tr><tr><td data-num="35"></td><td><pre><span class="token keyword">const</span> routes<span class="token operator">:</span> RouteRecordRaw<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span></pre></td></tr><tr><td data-num="36"></td><td><pre>  <span class="token punctuation">&#123;</span> <span class="token comment">// 路由的重定向</span></pre></td></tr><tr><td data-num="37"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="38"></td><td><pre>    redirect<span class="token operator">:</span> <span class="token string">'/home'</span></pre></td></tr><tr><td data-num="39"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="40"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="41"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/home'</span><span class="token punctuation">,</span> <span class="token comment">// 地址栏地址 - 路由</span></pre></td></tr><tr><td data-num="42"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'home'</span><span class="token punctuation">,</span> <span class="token comment">// 命名路由  ---   唯一性</span></pre></td></tr><tr><td data-num="43"></td><td><pre>    <span class="token comment">//component: HomeView // 路由映射的页面组件</span></pre></td></tr><tr><td data-num="44"></td><td><pre>    components<span class="token operator">:</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="45"></td><td><pre>      <span class="token keyword">default</span><span class="token operator">:</span> HomeView<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="46"></td><td><pre>      footer<span class="token operator">:</span> Footer</pre></td></tr><tr><td data-num="47"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="48"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="49"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="50"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/kind'</span><span class="token punctuation">,</span> </pre></td></tr><tr><td data-num="51"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'kind'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="52"></td><td><pre>    <span class="token comment">// component: KindView </span></pre></td></tr><tr><td data-num="53"></td><td><pre>    components<span class="token operator">:</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="54"></td><td><pre>      <span class="token keyword">default</span><span class="token operator">:</span> KindView<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="55"></td><td><pre>      footer<span class="token operator">:</span> Footer</pre></td></tr><tr><td data-num="56"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="57"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="58"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="59"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/result'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="60"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'result'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="61"></td><td><pre>    component<span class="token operator">:</span> ResultView</pre></td></tr><tr><td data-num="62"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="63"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="64"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/cart'</span><span class="token punctuation">,</span> </pre></td></tr><tr><td data-num="65"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'cart'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="66"></td><td><pre>    <span class="token comment">// component: CartView </span></pre></td></tr><tr><td data-num="67"></td><td><pre>    components<span class="token operator">:</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="68"></td><td><pre>      <span class="token keyword">default</span><span class="token operator">:</span> CartView<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="69"></td><td><pre>      footer<span class="token operator">:</span> Footer</pre></td></tr><tr><td data-num="70"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="71"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="72"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="73"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/user'</span><span class="token punctuation">,</span> </pre></td></tr><tr><td data-num="74"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'user'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="75"></td><td><pre>    <span class="token comment">// component: UserView </span></pre></td></tr><tr><td data-num="76"></td><td><pre>    components<span class="token operator">:</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="77"></td><td><pre>      <span class="token keyword">default</span><span class="token operator">:</span> UserView<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="78"></td><td><pre>      footer<span class="token operator">:</span> Footer</pre></td></tr><tr><td data-num="79"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="80"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="81"></td><td><pre>  <span class="token punctuation">&#123;</span><span class="token comment">// +++++++++</span></pre></td></tr><tr><td data-num="82"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/set'</span><span class="token punctuation">,</span> </pre></td></tr><tr><td data-num="83"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'set'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="84"></td><td><pre>    component<span class="token operator">:</span> SetView</pre></td></tr><tr><td data-num="85"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="86"></td><td><pre>  <span class="token punctuation">&#123;</span><span class="token comment">// +++++++++</span></pre></td></tr><tr><td data-num="87"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/userOrder'</span><span class="token punctuation">,</span> </pre></td></tr><tr><td data-num="88"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'userOrder'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="89"></td><td><pre>    component<span class="token operator">:</span> UserOrderView</pre></td></tr><tr><td data-num="90"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="91"></td><td><pre>  <span class="token punctuation">&#123;</span><span class="token comment">// +++++++++</span></pre></td></tr><tr><td data-num="92"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/userAddress'</span><span class="token punctuation">,</span> </pre></td></tr><tr><td data-num="93"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'userAddress'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="94"></td><td><pre>    component<span class="token operator">:</span> UserAddressView</pre></td></tr><tr><td data-num="95"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="96"></td><td><pre>  <span class="token punctuation">&#123;</span><span class="token comment">// +++++++++</span></pre></td></tr><tr><td data-num="97"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/userAddAddress'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="98"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'userAddAddress'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="99"></td><td><pre>    component<span class="token operator">:</span> UserAddAddressView</pre></td></tr><tr><td data-num="100"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="101"></td><td><pre>  <span class="token punctuation">&#123;</span><span class="token comment">// +++++++++</span></pre></td></tr><tr><td data-num="102"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/userFavorite'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="103"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'userFavorite'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="104"></td><td><pre>    component<span class="token operator">:</span> UserFavoriteView</pre></td></tr><tr><td data-num="105"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="106"></td><td><pre>  <span class="token punctuation">&#123;</span> <span class="token comment">// +++++++++</span></pre></td></tr><tr><td data-num="107"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/about'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="108"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'about'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="109"></td><td><pre>    component<span class="token operator">:</span> AboutView</pre></td></tr><tr><td data-num="110"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="111"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="112"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/detail/:proid'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="113"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'detail'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="114"></td><td><pre>    <span class="token comment">// component: DetailView</span></pre></td></tr><tr><td data-num="115"></td><td><pre>    components<span class="token operator">:</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="116"></td><td><pre>      <span class="token keyword">default</span><span class="token operator">:</span> DetailView</pre></td></tr><tr><td data-num="117"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="118"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="119"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="120"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/register'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="121"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'register'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="122"></td><td><pre>    redirect<span class="token operator">:</span> <span class="token string">'/register/index'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="123"></td><td><pre>    component<span class="token operator">:</span> RegisterView<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="124"></td><td><pre>    children<span class="token operator">:</span> <span class="token punctuation">[</span></pre></td></tr><tr><td data-num="125"></td><td><pre>      <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="126"></td><td><pre>        path<span class="token operator">:</span> <span class="token string">'index'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="127"></td><td><pre>        component<span class="token operator">:</span> CheckTelComponent</pre></td></tr><tr><td data-num="128"></td><td><pre>      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="129"></td><td><pre>      <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="130"></td><td><pre>        path<span class="token operator">:</span> <span class="token string">'sms'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="131"></td><td><pre>        component<span class="token operator">:</span> SendTelCodeComponent</pre></td></tr><tr><td data-num="132"></td><td><pre>      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="133"></td><td><pre>      <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="134"></td><td><pre>        path<span class="token operator">:</span> <span class="token string">'pwd'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="135"></td><td><pre>        component<span class="token operator">:</span> SetPasswordComponent</pre></td></tr><tr><td data-num="136"></td><td><pre>      <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="137"></td><td><pre>    <span class="token punctuation">]</span></pre></td></tr><tr><td data-num="138"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="139"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="140"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/login'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="141"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'login'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="142"></td><td><pre>    component<span class="token operator">:</span> LoginView</pre></td></tr><tr><td data-num="143"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="144"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="145"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/order'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="146"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'order'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="147"></td><td><pre>    component<span class="token operator">:</span> OrderView</pre></td></tr><tr><td data-num="148"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="149"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="150"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/orderAddress'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="151"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'orderAddress'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="152"></td><td><pre>    component<span class="token operator">:</span> OrderAddressListView</pre></td></tr><tr><td data-num="153"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="154"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="155"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/orderAddAddress'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="156"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'orderAddAddress'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="157"></td><td><pre>    component<span class="token operator">:</span> OrderAddAddressView</pre></td></tr><tr><td data-num="158"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="159"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="160"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/search'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="161"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'search'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="162"></td><td><pre>    component<span class="token operator">:</span> SearchView</pre></td></tr><tr><td data-num="163"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="164"></td><td><pre>  <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="165"></td><td><pre>    path<span class="token operator">:</span> <span class="token string">'/searchResult'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="166"></td><td><pre>    name<span class="token operator">:</span> <span class="token string">'searchResult'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="167"></td><td><pre>    component<span class="token operator">:</span> SearchResultView</pre></td></tr><tr><td data-num="168"></td><td><pre>  <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="169"></td><td><pre><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="170"></td><td><pre></pre></td></tr><tr><td data-num="171"></td><td><pre><span class="token comment">// 4. 生成路由</span></pre></td></tr><tr><td data-num="172"></td><td><pre><span class="token keyword">const</span> router<span class="token operator">:</span> Router <span class="token operator">=</span> <span class="token function">createRouter</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="173"></td><td><pre>  <span class="token comment">// vue2 vue-router3 history: 'history' | 'hash' </span></pre></td></tr><tr><td data-num="174"></td><td><pre>  history<span class="token operator">:</span> <span class="token function">createWebHistory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="175"></td><td><pre>  routes <span class="token comment">//routes: routes 简写形式</span></pre></td></tr><tr><td data-num="176"></td><td><pre><span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="177"></td><td><pre></pre></td></tr><tr><td data-num="178"></td><td><pre><span class="token comment">// 5. 暴露路由</span></pre></td></tr><tr><td data-num="179"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">default</span> router</pre></td></tr></table></figure><h4 id="148-更新用户名以及密码"><a class="anchor" href="#148-更新用户名以及密码">#</a> 14.8 更新用户名以及密码</h4><figure class="highlight ts"><figcaption data-lang="TypeScript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">// src/api/user.ts</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> request <span class="token keyword">from</span> <span class="token string">'./../service/request'</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment">// 检测手机号是否被注册过</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">doCheckPhone</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> tel<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/user/docheckphone'</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token comment">// 发送短信验证码</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">doSendMsgCode</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> tel<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/user/dosendmsgcode'</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="13"></td><td><pre></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token comment">// 验证验证码</span></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">doCheckCode</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> tel<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> telcode<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/user/docheckcode'</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="17"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="18"></td><td><pre></pre></td></tr><tr><td data-num="19"></td><td><pre><span class="token comment">// 设置密码完成注册</span></pre></td></tr><tr><td data-num="20"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">doFinishRegister</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> tel<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> password<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/user/dofinishregister'</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="22"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="23"></td><td><pre></pre></td></tr><tr><td data-num="24"></td><td><pre><span class="token comment">// 登录</span></pre></td></tr><tr><td data-num="25"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">doLogin</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> loginname<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> password<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="26"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/user/login'</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="27"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="28"></td><td><pre></pre></td></tr><tr><td data-num="29"></td><td><pre><span class="token comment">// 获取用户信息</span></pre></td></tr><tr><td data-num="30"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getUserInfo</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> userid<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="31"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/user/info'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> params <span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="32"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="33"></td><td><pre></pre></td></tr><tr><td data-num="34"></td><td><pre><span class="token comment">// 更新用户名</span></pre></td></tr><tr><td data-num="35"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">updateUsername</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> userid<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> username<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="36"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/user/bindusername'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>params<span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="37"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="38"></td><td><pre></pre></td></tr><tr><td data-num="39"></td><td><pre><span class="token comment">// 更新密码</span></pre></td></tr><tr><td data-num="40"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">updatePassword</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> userid<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> oldpassword<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> newpassword<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="41"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/user/updatePassword'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>params<span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="42"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><pre><code class="language-vue">&lt;!-- src/views/user/SetView.vue --&gt;
 &lt;template&gt;
   &lt;header class=&quot;header&quot;&gt;
     &lt;van-nav-bar   
@@ -917,21 +679,21 @@ export function updatePassword (params: &#123; userid: string, oldpassword: stri
 &lt;/template&gt;
 
 &lt;script lang=&quot;ts&quot;&gt;
-  import &#123; defineComponent &#125; from &#39;vue&#39;;
-  import &#123; updateUsername, getUserInfo, updatePassword &#125; from &#39;@/api/user&#39;
-import &#123; Toast &#125; from &#39;vant&#39;;
+  import &#123; defineComponent &#125; from 'vue';
+  import &#123; updateUsername, getUserInfo, updatePassword &#125; from '@/api/user'
+import &#123; Toast &#125; from 'vant';
   export default defineComponent(&#123;
     data () &#123;
       return &#123;
         userNameShow: false,
         passwordShow: false,
-        username: &#39;&#39;,
-        oldPassword: &#39;&#39;,
-        password: &#39;&#39;
+        username: '',
+        oldPassword: '',
+        password: ''
       &#125;
     &#125;,
     mounted () &#123;
-      getUserInfo(&#123;userid: localStorage.getItem(&#39;userid&#39;)!&#125;).then(res =&gt; &#123;
+      getUserInfo(&#123;userid: localStorage.getItem('userid')!&#125;).then(res =&gt; &#123;
         console.log(res.data)
         this.username = res.data.data[0].username
       &#125;)
@@ -939,35 +701,35 @@ import &#123; Toast &#125; from &#39;vant&#39;;
     methods: &#123;
       showUpdateUsername () &#123;
         if (this.username) &#123;
-          Toast(&#39;用户名只能更改一次&#39;)
+          Toast('用户名只能更改一次')
         &#125; else &#123;
           this.userNameShow = true
         &#125;
       &#125;,
       updateUsernameFn () &#123;
-        updateUsername(&#123; userid: localStorage.getItem(&#39;userid&#39;)!, username: this.username &#125;).then(res =&gt; &#123;
-          Toast(&#39;更改用户名成功&#39;)
+        updateUsername(&#123; userid: localStorage.getItem('userid')!, username: this.username &#125;).then(res =&gt; &#123;
+          Toast('更改用户名成功')
           this.userNameShow = false
         &#125;)
       &#125;,
       updatePasswordFn () &#123;
-        updatePassword(&#123; userid: localStorage.getItem(&#39;userid&#39;)!, oldpassword: this.oldPassword, newpassword: this.password &#125;).then(res =&gt; &#123;
-          if (res.data.code === &#39;10030&#39;) &#123;
-            Toast(&#39;原始密码错误&#39;)
+        updatePassword(&#123; userid: localStorage.getItem('userid')!, oldpassword: this.oldPassword, newpassword: this.password &#125;).then(res =&gt; &#123;
+          if (res.data.code === '10030') &#123;
+            Toast('原始密码错误')
           &#125; else &#123;
-            Toast(&#39;修改密码成功&#39;)
-            localStorage.removeItem(&#39;loginState&#39;)
-            localStorage.removeItem(&#39;userid&#39;)
-            localStorage.removeItem(&#39;token&#39;)
-            this.$router.push(&#39;/login&#39;)
+            Toast('修改密码成功')
+            localStorage.removeItem('loginState')
+            localStorage.removeItem('userid')
+            localStorage.removeItem('token')
+            this.$router.push('/login')
           &#125;
         &#125;)
       &#125;,
       logout () &#123;
-        localStorage.removeItem(&#39;loginState&#39;)
-        localStorage.removeItem(&#39;userid&#39;)
-        localStorage.removeItem(&#39;token&#39;)
-        this.$router.push(&#39;/login&#39;)
+        localStorage.removeItem('loginState')
+        localStorage.removeItem('userid')
+        localStorage.removeItem('token')
+        this.$router.push('/login')
       &#125;
     &#125;
   &#125;)
@@ -1014,7 +776,7 @@ import &#123; Toast &#125; from &#39;vant&#39;;
     &#125;
   &#125;
 &lt;/style&gt;
-</code></pre><h4 id="14-9-我的收藏夹"><a href="#14-9-我的收藏夹" class="headerlink" title="14.9 我的收藏夹"></a>14.9 我的收藏夹</h4><pre><code class="vue">&lt;!-- src/views/user/FavoriteView.vue --&gt;
+</code></pre><h4 id="149-我的收藏夹"><a class="anchor" href="#149-我的收藏夹">#</a> 14.9 我的收藏夹</h4><pre><code class="language-vue">&lt;!-- src/views/user/FavoriteView.vue --&gt;
 &lt;template&gt;
   &lt;header class=&quot;header&quot;&gt;
     &lt;van-nav-bar   
@@ -1030,7 +792,7 @@ import &#123; Toast &#125; from &#39;vant&#39;;
   &lt;div class=&quot;content&quot;&gt;
     &lt;div class=&quot;no&quot; v-if=&quot;flag&quot;&gt;
       &lt;van-empty description=&quot;收藏夹空空如也&quot;&gt;
-        &lt;van-button round type=&quot;danger&quot; class=&quot;bottom-button&quot; @click=&quot;$router.push(&#39;/kind&#39;)&quot;&gt;立即浏览收藏&lt;/van-button&gt;
+        &lt;van-button round type=&quot;danger&quot; class=&quot;bottom-button&quot; @click=&quot;$router.push('/kind')&quot;&gt;立即浏览收藏&lt;/van-button&gt;
       &lt;/van-empty&gt;
     &lt;/div&gt;
     &lt;div class=&quot;has&quot; v-else&gt;
@@ -1054,8 +816,8 @@ import &#123; Toast &#125; from &#39;vant&#39;;
 &lt;/template&gt;
 
 &lt;script lang=&quot;ts&quot;&gt;
-  import &#123; defineComponent &#125; from &#39;vue&#39;;
-  import &#123; getDetailData &#125; from &#39;@/api/detail&#39;
+  import &#123; defineComponent &#125; from 'vue';
+  import &#123; getDetailData &#125; from '@/api/detail'
   export default defineComponent(&#123;
     data (): any &#123;
       return &#123;
@@ -1069,7 +831,7 @@ import &#123; Toast &#125; from &#39;vant&#39;;
       &#125;
     &#125;,
     mounted () &#123;
-      this.arr = JSON.parse(localStorage.getItem(&#39;stars&#39;)!)
+      this.arr = JSON.parse(localStorage.getItem('stars')!)
       const newArr: any = []
       this.arr.forEach((item: string) =&gt; &#123;
         newArr.push(getDetailData(item))
@@ -1086,7 +848,7 @@ import &#123; Toast &#125; from &#39;vant&#39;;
       deleteItem (index: number) &#123;
         this.favoriteList.splice(index, 1)
         this.arr.splice(index, 1)
-        localStorage.setItem(&#39;stars&#39;, JSON.stringify(this.arr))
+        localStorage.setItem('stars', JSON.stringify(this.arr))
       &#125;
     &#125;
     
@@ -1108,54 +870,7 @@ import &#123; Toast &#125; from &#39;vant&#39;;
     height: 100%;
   &#125;
 &lt;/style&gt;
-</code></pre><h4 id="14-10-查看订单"><a href="#14-10-查看订单" class="headerlink" title="14.10 查看订单"></a>14.10 查看订单</h4><blockquote><p>18813007812 Xagp01</p></blockquote><pre><code class="ts">// src/api/user.ts
-import request from &#39;./../service/request&#39;
-
-// 检测手机号是否被注册过
-export function doCheckPhone (params: &#123; tel: string &#125;) &#123;
-  return request.post(&#39;/user/docheckphone&#39;, params)
-&#125;
-
-// 发送短信验证码
-export function doSendMsgCode (params: &#123; tel: string &#125;) &#123;
-  return request.post(&#39;/user/dosendmsgcode&#39;, params)
-&#125;
-
-// 验证验证码
-export function doCheckCode (params: &#123; tel: string, telcode: string &#125;) &#123;
-  return request.post(&#39;/user/docheckcode&#39;, params)
-&#125;
-
-// 设置密码完成注册
-export function doFinishRegister (params: &#123; tel: string, password: string &#125;) &#123;
-  return request.post(&#39;/user/dofinishregister&#39;, params)
-&#125;
-
-// 登录
-export function doLogin (params: &#123; loginname: string, password: string &#125;) &#123;
-  return request.post(&#39;/user/login&#39;, params)
-&#125;
-
-// 获取用户信息
-export function getUserInfo (params: &#123; userid: string &#125;) &#123;
-  return request.get(&#39;/user/info&#39;, &#123; params &#125;)
-&#125;
-
-// 更新用户名
-export function updateUsername (params: &#123; userid: string, username: string &#125;) &#123;
-  return request.get(&#39;/user/bindusername&#39;, &#123;params&#125;)
-&#125;
-
-// 更新密码
-export function updatePassword (params: &#123; userid: string, oldpassword: string, newpassword: string &#125;) &#123;
-  return request.get(&#39;/user/updatePassword&#39;, &#123;params&#125;)
-&#125;
-
-// 获取订单
-export function getAllOrderData (params: &#123; userid: string &#125;) &#123;
-  return request.get(&#39;/user/orderlist&#39;, &#123;params&#125;)
-&#125;
-</code></pre><pre><code class="vue">&lt;!-- src/views/user/OrderView.vue --&gt;
+</code></pre><h4 id="1410-查看订单"><a class="anchor" href="#1410-查看订单">#</a> 14.10 查看订单</h4><blockquote><p>18813007812 Xagp01</p></blockquote><figure class="highlight ts"><figcaption data-lang="TypeScript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">// src/api/user.ts</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> request <span class="token keyword">from</span> <span class="token string">'./../service/request'</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment">// 检测手机号是否被注册过</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">doCheckPhone</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> tel<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/user/docheckphone'</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token comment">// 发送短信验证码</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">doSendMsgCode</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> tel<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/user/dosendmsgcode'</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="13"></td><td><pre></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token comment">// 验证验证码</span></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">doCheckCode</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> tel<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> telcode<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/user/docheckcode'</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="17"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="18"></td><td><pre></pre></td></tr><tr><td data-num="19"></td><td><pre><span class="token comment">// 设置密码完成注册</span></pre></td></tr><tr><td data-num="20"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">doFinishRegister</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> tel<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> password<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/user/dofinishregister'</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="22"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="23"></td><td><pre></pre></td></tr><tr><td data-num="24"></td><td><pre><span class="token comment">// 登录</span></pre></td></tr><tr><td data-num="25"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">doLogin</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> loginname<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> password<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="26"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/user/login'</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="27"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="28"></td><td><pre></pre></td></tr><tr><td data-num="29"></td><td><pre><span class="token comment">// 获取用户信息</span></pre></td></tr><tr><td data-num="30"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getUserInfo</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> userid<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="31"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/user/info'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> params <span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="32"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="33"></td><td><pre></pre></td></tr><tr><td data-num="34"></td><td><pre><span class="token comment">// 更新用户名</span></pre></td></tr><tr><td data-num="35"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">updateUsername</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> userid<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> username<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="36"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/user/bindusername'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>params<span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="37"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="38"></td><td><pre></pre></td></tr><tr><td data-num="39"></td><td><pre><span class="token comment">// 更新密码</span></pre></td></tr><tr><td data-num="40"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">updatePassword</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> userid<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> oldpassword<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> newpassword<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="41"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/user/updatePassword'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>params<span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="42"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="43"></td><td><pre></pre></td></tr><tr><td data-num="44"></td><td><pre><span class="token comment">// 获取订单</span></pre></td></tr><tr><td data-num="45"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getAllOrderData</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> userid<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="46"></td><td><pre>  <span class="token keyword">return</span> request<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/user/orderlist'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>params<span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="47"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><pre><code class="language-vue">&lt;!-- src/views/user/OrderView.vue --&gt;
 &lt;template&gt;
   &lt;header class=&quot;header&quot;&gt;
     &lt;van-nav-bar   
@@ -1228,8 +943,8 @@ export function getAllOrderData (params: &#123; userid: string &#125;) &#123;
 &lt;/template&gt;
 
 &lt;script lang=&quot;ts&quot;&gt;
-  import &#123; defineComponent &#125; from &#39;vue&#39;;
-  import &#123; getAllOrderData &#125; from &#39;@/api/user&#39;
+  import &#123; defineComponent &#125; from 'vue';
+  import &#123; getAllOrderData &#125; from '@/api/user'
   export default defineComponent(&#123;
     data (): any &#123;
       return &#123;
@@ -1251,7 +966,7 @@ export function getAllOrderData (params: &#123; userid: string &#125;) &#123;
     mounted () &#123;
       this.active = Number(this.$route.query.type)
 
-      getAllOrderData(&#123; userid: localStorage.getItem(&#39;userid&#39;)!&#125;).then(res =&gt; &#123;
+      getAllOrderData(&#123; userid: localStorage.getItem('userid')!&#125;).then(res =&gt; &#123;
         console.log(res.data)
         this.orderList = res.data.data
       &#125;)
@@ -1274,7 +989,7 @@ export function getAllOrderData (params: &#123; userid: string &#125;) &#123;
     margin-top: 50px;
   &#125;
 &lt;/style&gt;
-</code></pre><h4 id="14-11-完善个人中心界面"><a href="#14-11-完善个人中心界面" class="headerlink" title="14.11 完善个人中心界面"></a>14.11 完善个人中心界面</h4><pre><code class="vue">&lt;!-- src/views/user/IndexView.vue --&gt;
+</code></pre><h4 id="1411-完善个人中心界面"><a class="anchor" href="#1411-完善个人中心界面">#</a> 14.11 完善个人中心界面</h4><pre><code class="language-vue">&lt;!-- src/views/user/IndexView.vue --&gt;
 &lt;template&gt;
   &lt;header class=&quot;header&quot;&gt;
     &lt;van-nav-bar   
@@ -1313,52 +1028,52 @@ export function getAllOrderData (params: &#123; userid: string &#125;) &#123;
 &lt;/template&gt;
 
 &lt;script lang=&quot;ts&quot;&gt;
-  import &#123; defineComponent &#125; from &#39;vue&#39;;
-  import logo from &#39;@/assets/logo.png&#39;
-  import &#123; getUserInfo  &#125; from &#39;@/api/user&#39;
+  import &#123; defineComponent &#125; from 'vue';
+  import logo from '@/assets/logo.png'
+  import &#123; getUserInfo  &#125; from '@/api/user'
   export default defineComponent(&#123;
     data () &#123;
       return &#123;
         logo,
         userFlag: false,
-        username: &#39;&#39;
+        username: ''
       &#125;
     &#125;,
     mounted () &#123;
-      if (localStorage.getItem(&#39;userid&#39;)) &#123;
+      if (localStorage.getItem('userid')) &#123;
         // 用户登录
         this.userFlag = true
-        getUserInfo(&#123; userid: localStorage.getItem(&#39;userid&#39;)!&#125;).then(res =&gt; &#123;
+        getUserInfo(&#123; userid: localStorage.getItem('userid')!&#125;).then(res =&gt; &#123;
           console.log(res.data)
           this.username = res.data.data[0].username ? res.data.data[0].username : res.data.data[0].tel
         &#125;)
       &#125; else &#123;
         // 用户未登录
         this.userFlag = false
-        // this.$router.push(&#39;/login&#39;)
+        // this.$router.push('/login')
       &#125;
     &#125;,
 
     methods: &#123;
       getOrder (type: number) &#123;
-        if (localStorage.getItem(&#39;loginState&#39;) === &#39;true&#39;) &#123;
-          this.$router.push(&#39;/userOrder?type=&#39; + type)
+        if (localStorage.getItem('loginState') === 'true') &#123;
+          this.$router.push('/userOrder?type=' + type)
         &#125; else &#123;
-          this.$router.push(&#39;/login&#39;)
+          this.$router.push('/login')
         &#125;
       &#125;,
       toAddressList () &#123;
-        if (localStorage.getItem(&#39;loginState&#39;) === &#39;true&#39;) &#123;
-          this.$router.push(&#39;/userAddress&#39;)
+        if (localStorage.getItem('loginState') === 'true') &#123;
+          this.$router.push('/userAddress')
         &#125; else &#123;
-          this.$router.push(&#39;/login&#39;)
+          this.$router.push('/login')
         &#125;
       &#125;,
       toFavorite () &#123;
-        this.$router.push(&#39;/userFavorite&#39;)
+        this.$router.push('/userFavorite')
       &#125;,
       toAbout () &#123;
-        this.$router.push(&#39;/about&#39;)
+        this.$router.push('/about')
       &#125;
     &#125;
   &#125;)
@@ -1401,4 +1116,4 @@ export function getAllOrderData (params: &#123; userid: string &#125;) &#123;
     justify-content: center;
   &#125;
 &lt;/style&gt;
-</code></pre><div class="tags"><a href="/tags/vue/" rel="tag"><i class="ic i-tag"></i> vue</a> <a href="/tags/TypeScript/" rel="tag"><i class="ic i-tag"></i> TypeScript</a></div></div><footer><div class="meta"><span id="vue-mobile/14/" class="item leancloud_visitors" data-flag-title="vue-mobile项目开发流程第十四部分(实现kind和user页面)" title="阅读次数"><span class="icon"><i class="ic i-eye"></i> </span><span class="text">阅读次数</span> <span class="leancloud-visitors-count"></span> <span class="text">次</span></span></div><div class="reward"><button><i class="ic i-heartbeat"></i> 联系我</button><p>来交朋友吧！</p><div id="qr"><div><img data-src="/images/wechatpay.png" alt="叶星辰 微信支付"><p>微信支付</p></div><div><img data-src="/images/alipay.png" alt="叶星辰 支付宝"><p>支付宝</p></div><div><img data-src="/images/paypal.png" alt="叶星辰 QQ"><p>QQ</p></div></div></div><div id="copyright"><ul><li class="author"><strong>本文作者： </strong>叶星辰 <i class="ic i-at"><em>@</em></i>永不陨落的星辰</li><li class="link"><strong>本文链接：</strong> <a href="https://www.yexingcheng.com/vue-mobile/14/" title="vue-mobile项目开发流程第十四部分(实现kind和user页面)">https://www.yexingcheng.com/vue-mobile/14/</a></li><li class="license"><strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/vue-mobile/13/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeyhsblkj20zk0m81kx.jpg" title="vue-mobile项目开发流程第十三部分(实现提交订单功能)"><span class="type">上一篇</span> <span class="category"><i class="ic i-flag"></i> vue3移动端项目开发</span><h3>vue-mobile项目开发流程第十三部分(实现提交订单功能)</h3></a></div><div class="item right"><a href="/vue-mobile/15/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclfw2t96j20zk0m8x6p.jpg" title="vue-mobile项目开发流程第十五部分(状态管理器,城市选择,登陆状态,已经路由守卫)"><span class="type">下一篇</span> <span class="category"><i class="ic i-flag"></i> vue3移动端项目开发</span><h3>vue-mobile项目开发流程第十五部分(状态管理器,城市选择,登陆状态,已经路由守卫)</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83"><span class="toc-number">2.</span> <span class="toc-text">14 个人中心</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#14-1-%E8%AE%BE%E7%BD%AE%E9%A1%B5%E9%9D%A2"><span class="toc-number">2.1.</span> <span class="toc-text">14.1 设置页面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-2-%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83%E9%A1%B5%E9%9D%A2"><span class="toc-number">2.2.</span> <span class="toc-text">14.2 个人中心页面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-3-%E5%9C%B0%E5%9D%80%E9%A1%B5%E9%9D%A2"><span class="toc-number">2.3.</span> <span class="toc-text">14.3 地址页面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-4-%E6%94%B6%E8%97%8F%E5%A4%B9%E9%A1%B5%E9%9D%A2"><span class="toc-number">2.4.</span> <span class="toc-text">14.4 收藏夹页面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-5-%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC"><span class="toc-number">2.5.</span> <span class="toc-text">14.5 关于我们</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-6-%E8%AE%A2%E5%8D%95%E9%A1%B5%E9%9D%A2"><span class="toc-number">2.6.</span> <span class="toc-text">14.6 订单页面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-7-%E8%AE%BE%E7%BD%AE%E8%B7%AF%E7%94%B1"><span class="toc-number">2.7.</span> <span class="toc-text">14.7 设置路由</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-8-%E6%9B%B4%E6%96%B0%E7%94%A8%E6%88%B7%E5%90%8D%E4%BB%A5%E5%8F%8A%E5%AF%86%E7%A0%81"><span class="toc-number">2.8.</span> <span class="toc-text">14.8 更新用户名以及密码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-9-%E6%88%91%E7%9A%84%E6%94%B6%E8%97%8F%E5%A4%B9"><span class="toc-number">2.9.</span> <span class="toc-text">14.9 我的收藏夹</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-10-%E6%9F%A5%E7%9C%8B%E8%AE%A2%E5%8D%95"><span class="toc-number">2.10.</span> <span class="toc-text">14.10 查看订单</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-11-%E5%AE%8C%E5%96%84%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83%E7%95%8C%E9%9D%A2"><span class="toc-number">2.11.</span> <span class="toc-text">14.11 完善个人中心界面</span></a></li></ol></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li><a href="/vue-mobile/1/" rel="bookmark" title="vue-mobile项目开发流程第一部分(项目搭建和技术栈选择)">vue-mobile项目开发流程第一部分(项目搭建和技术栈选择)</a></li><li><a href="/vue-mobile/2/" rel="bookmark" title="vue-mobile项目开发流程第二部分(单文件组件介绍)">vue-mobile项目开发流程第二部分(单文件组件介绍)</a></li><li><a href="/vue-mobile/3/" rel="bookmark" title="vue-mobile项目开发流程第三部分(TS与选项式API)">vue-mobile项目开发流程第三部分(TS与选项式API)</a></li><li><a href="/vue-mobile/4/" rel="bookmark" title="vue-mobile项目开发流程第四部分(开始构建项目)">vue-mobile项目开发流程第四部分(开始构建项目)</a></li><li><a href="/vue-mobile/5/" rel="bookmark" title="vue-mobile项目开发流程第五部分(封装数据请求)">vue-mobile项目开发流程第五部分(封装数据请求)</a></li><li><a href="/vue-mobile/6/" rel="bookmark" title="vue-mobile项目开发流程第六部分(构建home页面)">vue-mobile项目开发流程第六部分(构建home页面)</a></li><li><a href="/vue-mobile/7/" rel="bookmark" title="vue-mobile项目开发流程第七部分(构建detail页面)">vue-mobile项目开发流程第七部分(构建detail页面)</a></li><li><a href="/vue-mobile/8/" rel="bookmark" title="vue-mobile项目开发流程第八部分(构建register页面)">vue-mobile项目开发流程第八部分(构建register页面)</a></li><li><a href="/vue-mobile/9/" rel="bookmark" title="vue-mobile项目开发流程第九部分(构建login页面)">vue-mobile项目开发流程第九部分(构建login页面)</a></li><li><a href="/vue-mobile/10/" rel="bookmark" title="vue-mobile项目开发流程第十部分(构建joinshopcar页面)">vue-mobile项目开发流程第十部分(构建joinshopcar页面)</a></li><li><a href="/vue-mobile/11/" rel="bookmark" title="vue-mobile项目开发流程第十一部分(实现shopcar功能)">vue-mobile项目开发流程第十一部分(实现shopcar功能)</a></li><li><a href="/vue-mobile/12/" rel="bookmark" title="vue-mobile项目开发流程第十二部分(实现提交订单功能)">vue-mobile项目开发流程第十二部分(实现提交订单功能)</a></li><li><a href="/vue-mobile/13/" rel="bookmark" title="vue-mobile项目开发流程第十三部分(实现提交订单功能)">vue-mobile项目开发流程第十三部分(实现提交订单功能)</a></li><li class="active"><a href="/vue-mobile/14/" rel="bookmark" title="vue-mobile项目开发流程第十四部分(实现kind和user页面)">vue-mobile项目开发流程第十四部分(实现kind和user页面)</a></li><li><a href="/vue-mobile/15/" rel="bookmark" title="vue-mobile项目开发流程第十五部分(状态管理器,城市选择,登陆状态,已经路由守卫)">vue-mobile项目开发流程第十五部分(状态管理器,城市选择,登陆状态,已经路由守卫)</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="image" itemprop="image" alt="叶星辰" data-src="/images/avatar.jpg"><p class="name" itemprop="name">叶星辰</p><div class="description" itemprop="description">温柔正确的人总是难以生存，因为这个世界既不温柔 也不正确</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">39</span> <span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">7</span> <span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">17</span> <span class="name">标签</span></a></div></nav><div class="social"><span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NhMW1EMHduMQ==" title="https:&#x2F;&#x2F;github.com&#x2F;Ca1mD0wn1"><i class="ic i-github"></i></span> <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9VZmRIbw==" title="https:&#x2F;&#x2F;twitter.com&#x2F;UfdHo"><i class="ic i-twitter"></i></span> <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9tZW5nLXhpbmcteW91LWppLXNpLXl1ZS1odWFuZy0yNw==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;meng-xing-you-ji-si-yue-huang-27"><i class="ic i-zhihu"></i></span> <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTUwMjkxOTQ0NQ==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;502919445"><i class="ic i-cloud-music"></i></span> <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS83NTc4MjU1ODg1" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7578255885"><i class="ic i-weibo"></i></span> <span class="exturl item email" data-url="aHR0cHM6Ly9tYWlsLmdvb2dsZS5jb20vbWFpbC91LzAvI2luYm94" title="https:&#x2F;&#x2F;mail.google.com&#x2F;mail&#x2F;u&#x2F;0&#x2F;#inbox"><i class="ic i-envelope"></i></span></div><ul class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item"><a href="/about/" rel="section"><i class="ic i-user"></i>关于</a></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li><li class="item"><a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a></li><li class="item"><a href="/links/" rel="section"><i class="ic i-magic"></i>links</a></li></ul></div></div></div><ul id="quick"><li class="prev pjax"><a href="/vue-mobile/13/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/vue-mobile/15/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/vue3%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" title="分类于 vue3移动端项目开发">vue3移动端项目开发</a></div><span><a href="/vue-mobile/14/" title="vue-mobile项目开发流程第十四部分(实现kind和user页面)">vue-mobile项目开发流程第十四部分(实现kind和user页面)</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/react%E5%AD%A6%E4%B9%A0/" title="分类于 react学习">react学习</a></div><span><a href="/react-study/3/" title="React学习第三天">React学习第三天</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/vue3%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" title="分类于 vue3移动端项目开发">vue3移动端项目开发</a></div><span><a href="/vue-mobile/11/" title="vue-mobile项目开发流程第十一部分(实现shopcar功能)">vue-mobile项目开发流程第十一部分(实现shopcar功能)</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/react%E5%AD%A6%E4%B9%A0/" title="分类于 react学习">react学习</a></div><span><a href="/react-study/4/" title="React学习第四天">React学习第四天</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/react%E5%AD%A6%E4%B9%A0/" title="分类于 react学习">react学习</a></div><span><a href="/react-study/react-router-params/" title="React路由传参的几种方式">React路由传参的几种方式</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/vue3%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" title="分类于 vue3移动端项目开发">vue3移动端项目开发</a></div><span><a href="/vue-mobile/8/" title="vue-mobile项目开发流程第八部分(构建register页面)">vue-mobile项目开发流程第八部分(构建register页面)</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Screeps/" title="分类于 screeps">screeps</a></div><span><a href="/Screeps/chinese/" title="screeps汉化（steam)">screeps汉化（steam)</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" title="分类于 微信小程序">微信小程序</a></div><span><a href="/wx-app/day2/" title="微信小程序学习第二天">微信小程序学习第二天</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" title="分类于 微信小程序">微信小程序</a></div><span><a href="/wx-app/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/" title="微信公众号的开发">微信公众号的开发</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/vue3%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" title="分类于 vue3移动端项目开发">vue3移动端项目开发</a></div><span><a href="/vue-mobile/15/" title="vue-mobile项目开发流程第十五部分(状态管理器,城市选择,登陆状态,已经路由守卫)">vue-mobile项目开发流程第十五部分(状态管理器,城市选择,登陆状态,已经路由守卫)</a></span></li></ul></div><div><h2>最新评论</h2><ul class="leancloud-recent-comment"></ul></div></div><div class="status"><div class="copyright">&copy; 2021 – <span itemprop="copyrightYear">2022</span> <span class="with-love"><i class="ic i-sakura rotate"></i> </span><span class="author" itemprop="copyrightHolder">叶星辰 @ 永不陨落的星辰</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i> </span><span title="站点总字数">624k 字</span> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="ic i-coffee"></i> </span><span title="站点阅读时长">9:28</span></div><div class="powered-by">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL={path:"vue-mobile/14/",favicon:{show:"星辰",hide:"你快回来"},search:{placeholder:"文章搜索",empty:"关于 「 ${query} 」，什么也没搜到",stats:"${time} ms 内找到 ${hits} 条结果"},valine:!0,fancybox:!0,copyright:'复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',ignores:[function(e){return e.includes("#")},function(e){return new RegExp(LOCAL.path+"$").test(e)}]}</script><script src="https://cdn.polyfill.io/v2/polyfill.js"></script><script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script><script src="/js/app.js?v=0.2.5"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({model:{jsonPath:"/live2dw/assets/miku.model.json"},display:{position:"right",width:250,height:500},mobile:{show:!1},log:!1,pluginJsPath:"lib/",pluginModelPath:"assets/",pluginRootPath:"live2dw/",tagMode:!1})</script></body></html><!-- rebuild by hrmmi -->
+</code></pre><div class="tags"><a href="/tags/vue/" rel="tag"><i class="ic i-tag"></i> vue</a> <a href="/tags/TypeScript/" rel="tag"><i class="ic i-tag"></i> TypeScript</a></div></div><footer><div class="meta"><span id="vue-mobile/14/" class="item leancloud_visitors" data-flag-title="vue-mobile项目开发流程第十四部分(实现kind和user页面)" title="阅读次数"><span class="icon"><i class="ic i-eye"></i> </span><span class="text">阅读次数</span> <span class="leancloud-visitors-count"></span> <span class="text">次</span></span></div><div class="reward"><button><i class="ic i-heartbeat"></i> 联系我</button><p>来交朋友吧！</p><div id="qr"><div><img data-src="/images/wechatpay.png" alt="叶星辰 微信支付"><p>微信支付</p></div><div><img data-src="/images/alipay.png" alt="叶星辰 支付宝"><p>支付宝</p></div><div><img data-src="/images/paypal.png" alt="叶星辰 QQ"><p>QQ</p></div></div></div><div id="copyright"><ul><li class="author"><strong>本文作者： </strong>叶星辰 <i class="ic i-at"><em>@</em></i>永不陨落的星辰</li><li class="link"><strong>本文链接：</strong> <a href="https://www.yexingcheng.com/vue-mobile/14/" title="vue-mobile项目开发流程第十四部分(实现kind和user页面)">https://www.yexingcheng.com/vue-mobile/14/</a></li><li class="license"><strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/vue-mobile/13/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicit4jrvuj20zk0m8785.jpg" title="vue-mobile项目开发流程第十三部分(实现提交订单功能)"><span class="type">上一篇</span> <span class="category"><i class="ic i-flag"></i> vue3移动端项目开发</span><h3>vue-mobile项目开发流程第十三部分(实现提交订单功能)</h3></a></div><div class="item right"><a href="/vue-mobile/15/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciuv0socj20zk0m8qes.jpg" title="vue-mobile项目开发流程第十五部分(状态管理器,城市选择,登陆状态,已经路由守卫)"><span class="type">下一篇</span> <span class="category"><i class="ic i-flag"></i> vue3移动端项目开发</span><h3>vue-mobile项目开发流程第十五部分(状态管理器,城市选择,登陆状态,已经路由守卫)</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83"><span class="toc-number">2.</span> <span class="toc-text">14 个人中心</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#141-%E8%AE%BE%E7%BD%AE%E9%A1%B5%E9%9D%A2"><span class="toc-number">2.1.</span> <span class="toc-text">14.1 设置页面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#142-%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83%E9%A1%B5%E9%9D%A2"><span class="toc-number">2.2.</span> <span class="toc-text">14.2 个人中心页面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#143-%E5%9C%B0%E5%9D%80%E9%A1%B5%E9%9D%A2"><span class="toc-number">2.3.</span> <span class="toc-text">14.3 地址页面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#144-%E6%94%B6%E8%97%8F%E5%A4%B9%E9%A1%B5%E9%9D%A2"><span class="toc-number">2.4.</span> <span class="toc-text">14.4 收藏夹页面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#145-%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC"><span class="toc-number">2.5.</span> <span class="toc-text">14.5 关于我们</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#146-%E8%AE%A2%E5%8D%95%E9%A1%B5%E9%9D%A2"><span class="toc-number">2.6.</span> <span class="toc-text">14.6 订单页面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#147-%E8%AE%BE%E7%BD%AE%E8%B7%AF%E7%94%B1"><span class="toc-number">2.7.</span> <span class="toc-text">14.7 设置路由</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#148-%E6%9B%B4%E6%96%B0%E7%94%A8%E6%88%B7%E5%90%8D%E4%BB%A5%E5%8F%8A%E5%AF%86%E7%A0%81"><span class="toc-number">2.8.</span> <span class="toc-text">14.8 更新用户名以及密码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#149-%E6%88%91%E7%9A%84%E6%94%B6%E8%97%8F%E5%A4%B9"><span class="toc-number">2.9.</span> <span class="toc-text">14.9 我的收藏夹</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1410-%E6%9F%A5%E7%9C%8B%E8%AE%A2%E5%8D%95"><span class="toc-number">2.10.</span> <span class="toc-text">14.10 查看订单</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1411-%E5%AE%8C%E5%96%84%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83%E7%95%8C%E9%9D%A2"><span class="toc-number">2.11.</span> <span class="toc-text">14.11 完善个人中心界面</span></a></li></ol></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li><a href="/vue-mobile/1/" rel="bookmark" title="vue-mobile项目开发流程第一部分(项目搭建和技术栈选择)">vue-mobile项目开发流程第一部分(项目搭建和技术栈选择)</a></li><li><a href="/vue-mobile/2/" rel="bookmark" title="vue-mobile项目开发流程第二部分(单文件组件介绍)">vue-mobile项目开发流程第二部分(单文件组件介绍)</a></li><li><a href="/vue-mobile/3/" rel="bookmark" title="vue-mobile项目开发流程第三部分(TS与选项式API)">vue-mobile项目开发流程第三部分(TS与选项式API)</a></li><li><a href="/vue-mobile/4/" rel="bookmark" title="vue-mobile项目开发流程第四部分(开始构建项目)">vue-mobile项目开发流程第四部分(开始构建项目)</a></li><li><a href="/vue-mobile/5/" rel="bookmark" title="vue-mobile项目开发流程第五部分(封装数据请求)">vue-mobile项目开发流程第五部分(封装数据请求)</a></li><li><a href="/vue-mobile/6/" rel="bookmark" title="vue-mobile项目开发流程第六部分(构建home页面)">vue-mobile项目开发流程第六部分(构建home页面)</a></li><li><a href="/vue-mobile/7/" rel="bookmark" title="vue-mobile项目开发流程第七部分(构建detail页面)">vue-mobile项目开发流程第七部分(构建detail页面)</a></li><li><a href="/vue-mobile/8/" rel="bookmark" title="vue-mobile项目开发流程第八部分(构建register页面)">vue-mobile项目开发流程第八部分(构建register页面)</a></li><li><a href="/vue-mobile/9/" rel="bookmark" title="vue-mobile项目开发流程第九部分(构建login页面)">vue-mobile项目开发流程第九部分(构建login页面)</a></li><li><a href="/vue-mobile/10/" rel="bookmark" title="vue-mobile项目开发流程第十部分(构建joinshopcar页面)">vue-mobile项目开发流程第十部分(构建joinshopcar页面)</a></li><li><a href="/vue-mobile/11/" rel="bookmark" title="vue-mobile项目开发流程第十一部分(实现shopcar功能)">vue-mobile项目开发流程第十一部分(实现shopcar功能)</a></li><li><a href="/vue-mobile/12/" rel="bookmark" title="vue-mobile项目开发流程第十二部分(实现提交订单功能)">vue-mobile项目开发流程第十二部分(实现提交订单功能)</a></li><li><a href="/vue-mobile/13/" rel="bookmark" title="vue-mobile项目开发流程第十三部分(实现提交订单功能)">vue-mobile项目开发流程第十三部分(实现提交订单功能)</a></li><li class="active"><a href="/vue-mobile/14/" rel="bookmark" title="vue-mobile项目开发流程第十四部分(实现kind和user页面)">vue-mobile项目开发流程第十四部分(实现kind和user页面)</a></li><li><a href="/vue-mobile/15/" rel="bookmark" title="vue-mobile项目开发流程第十五部分(状态管理器,城市选择,登陆状态,已经路由守卫)">vue-mobile项目开发流程第十五部分(状态管理器,城市选择,登陆状态,已经路由守卫)</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="image" itemprop="image" alt="叶星辰" data-src="/images/avatar.jpg"><p class="name" itemprop="name">叶星辰</p><div class="description" itemprop="description">温柔正确的人总是难以生存，因为这个世界既不温柔 也不正确</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">39</span> <span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">7</span> <span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">17</span> <span class="name">标签</span></a></div></nav><div class="social"><span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NhMW1EMHduMQ==" title="https:&#x2F;&#x2F;github.com&#x2F;Ca1mD0wn1"><i class="ic i-github"></i></span> <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9VZmRIbw==" title="https:&#x2F;&#x2F;twitter.com&#x2F;UfdHo"><i class="ic i-twitter"></i></span> <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9tZW5nLXhpbmcteW91LWppLXNpLXl1ZS1odWFuZy0yNw==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;meng-xing-you-ji-si-yue-huang-27"><i class="ic i-zhihu"></i></span> <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTUwMjkxOTQ0NQ==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;502919445"><i class="ic i-cloud-music"></i></span> <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS83NTc4MjU1ODg1" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7578255885"><i class="ic i-weibo"></i></span> <span class="exturl item email" data-url="aHR0cHM6Ly9tYWlsLmdvb2dsZS5jb20vbWFpbC91LzAvI2luYm94" title="https:&#x2F;&#x2F;mail.google.com&#x2F;mail&#x2F;u&#x2F;0&#x2F;#inbox"><i class="ic i-envelope"></i></span></div><ul class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item"><a href="/about/" rel="section"><i class="ic i-user"></i>关于</a></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li><li class="item"><a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a></li><li class="item"><a href="/links/" rel="section"><i class="ic i-magic"></i>links</a></li></ul></div></div></div><ul id="quick"><li class="prev pjax"><a href="/vue-mobile/13/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/vue-mobile/15/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/react%E5%AD%A6%E4%B9%A0/" title="分类于 react学习">react学习</a></div><span><a href="/react-study/4/" title="React学习第四天">React学习第四天</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/interview/" title="分类于 面试用">面试用</a></div><span><a href="/interview/Currying/" title="详解柯里化和反柯里化">详解柯里化和反柯里化</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/vue3%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" title="分类于 vue3移动端项目开发">vue3移动端项目开发</a></div><span><a href="/vue-mobile/11/" title="vue-mobile项目开发流程第十一部分(实现shopcar功能)">vue-mobile项目开发流程第十一部分(实现shopcar功能)</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/react%E5%AD%A6%E4%B9%A0/" title="分类于 react学习">react学习</a></div><span><a href="/react-study/5/" title="React学习第五天">React学习第五天</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/react%E5%AD%A6%E4%B9%A0/" title="分类于 react学习">react学习</a></div><span><a href="/react-study/1/" title="React学习第一天">React学习第一天</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/vue3%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" title="分类于 vue3移动端项目开发">vue3移动端项目开发</a></div><span><a href="/vue-mobile/15/" title="vue-mobile项目开发流程第十五部分(状态管理器,城市选择,登陆状态,已经路由守卫)">vue-mobile项目开发流程第十五部分(状态管理器,城市选择,登陆状态,已经路由守卫)</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Screeps/" title="分类于 screeps">screeps</a></div><span><a href="/Screeps/action1/" title="screeps日记 part1">screeps日记 part1</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/vue3%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" title="分类于 vue3移动端项目开发">vue3移动端项目开发</a></div><span><a href="/vue-mobile/4/" title="vue-mobile项目开发流程第四部分(开始构建项目)">vue-mobile项目开发流程第四部分(开始构建项目)</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Screeps/" title="分类于 screeps">screeps</a></div><span><a href="/Screeps/chinese/" title="screeps汉化（steam)">screeps汉化（steam)</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/interview/" title="分类于 面试用">面试用</a></div><span><a href="/interview/Variable-recycling/" title="JS变量回收机制">JS变量回收机制</a></span></li></ul></div><div><h2>最新评论</h2><ul class="leancloud-recent-comment"></ul></div></div><div class="status"><div class="copyright">&copy; 2021 – <span itemprop="copyrightYear">2022</span> <span class="with-love"><i class="ic i-sakura rotate"></i> </span><span class="author" itemprop="copyrightHolder">叶星辰 @ 永不陨落的星辰</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i> </span><span title="站点总字数">581k 字</span> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="ic i-coffee"></i> </span><span title="站点阅读时长">8:48</span></div><div class="powered-by">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL={path:"vue-mobile/14/",favicon:{show:"星辰",hide:"你快回来"},search:{placeholder:"文章搜索",empty:"关于 「 ${query} 」，什么也没搜到",stats:"${time} ms 内找到 ${hits} 条结果"},valine:!0,fancybox:!0,copyright:'复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',ignores:[function(e){return e.includes("#")},function(e){return new RegExp(LOCAL.path+"$").test(e)}]}</script><script src="https://cdn.polyfill.io/v2/polyfill.js"></script><script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script><script src="/js/app.js?v=0.2.5"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({model:{jsonPath:"/live2dw/assets/miku.model.json"},display:{position:"right",width:250,height:500},mobile:{show:!1},log:!1,pluginJsPath:"lib/",pluginModelPath:"assets/",pluginRootPath:"live2dw/",tagMode:!1})</script></body></html><!-- rebuild by hrmmi -->
