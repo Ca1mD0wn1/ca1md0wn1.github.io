@@ -1,0 +1,454 @@
+<!-- build time:Fri Nov 11 2022 00:22:14 GMT+0800 (中国标准时间) --><!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#FFF"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" type="application/rss+xml" title="永不陨落的星辰" href="https://www.yexingcheng.com/rss.xml"><link rel="alternate" type="application/atom+xml" title="永不陨落的星辰" href="https://www.yexingcheng.com/atom.xml"><link rel="alternate" type="application/json" title="永不陨落的星辰" href="https://www.yexingcheng.com/feed.json"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/css/app.css?v=0.2.5"><meta name="keywords" content="react,ts"><link rel="canonical" href="https://www.yexingcheng.com/React-Native/React-Native1/"><title>React Native学习第一天 - React Native | 永不陨落的星辰 = 永不陨落的星辰</title><meta name="generator" content="Hexo 6.3.0"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">React Native学习第一天</h1><div class="meta"><span class="item" title="创建时间：2022-11-10 21:59:24"><span class="icon"><i class="ic i-calendar"></i> </span><span class="text">发表于</span> <time itemprop="dateCreated datePublished" datetime="2022-11-10T21:59:24+08:00">2022-11-10</time> </span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i> </span><span class="text">本文字数</span> <span>16k</span> <span class="text">字</span> </span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i> </span><span class="text">阅读时长</span> <span>14 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span> <span class="line"></span> <span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">永不陨落的星辰</a></li></ul><ul class="right"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div id="imgs" class="pjax"><ul><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciusoyjnj219g0u0x56.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipey0a334j20zk0m8qpt.jpg"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"/><use xlink:href="#gentle-wave" x="48" y="3"/><use xlink:href="#gentle-wave" x="48" y="5"/><use xlink:href="#gentle-wave" x="48" y="7"/></g></svg></div><main><div class="inner"><div id="main" class="pjax"><div class="article wrap"><div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i> <span><a href="/">首页</a></span><i class="ic i-angle-right"></i> <span class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/React-Native/" itemprop="item" rel="index" title="分类于 React Native"><span itemprop="name">React Native</span></a><meta itemprop="position" content="1"></span></div><article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://www.yexingcheng.com/React-Native/React-Native1/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="/images/avatar.jpg"><meta itemprop="name" content="叶星辰"><meta itemprop="description" content=", 温柔正确的人总是难以生存，因为这个世界既不温柔 也不正确"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="永不陨落的星辰"></span><div class="body md" itemprop="articleBody"><h1 id="起步："><a href="#起步：" class="headerlink" title="起步："></a>起步：</h1><p>本节将帮助您安装和构建第一个 React Native 应用程序。如果您已经安装了 React Native，那么可以跳过本教程。</p><p>如果你是移动开发新手，最简单的入门方法是使用Expo CLI。Expo是一套围绕React Native构建的工具，虽然它有很多功能，最基础的功能是它可以让你在几分钟内编写一个React Native应用程序。你只需要Node.js的最新版本和一个手机或模拟器。如果您想在安装任何工具之前直接在web浏览器中试用React Native，可以试用[Snack](<span class="exturl" data-url="aHR0cHM6Ly9zbmFjay5leHBvLmlvLw==">https://snack.expo.io/</span> Snack)。</p><p>如果您已经熟悉移动开发，那么可能需要使用React Native CLI。它需要Xcode或Android Studio才能启动。如果你已经安装了其中一个工具，您应该能够在几分钟内启动并运行。如果没有安装，您应该花大约一个小时来安装和配置它们。</p><h2 id="使用-Expo-CLI"><a href="#使用-Expo-CLI" class="headerlink" title="使用 Expo CLI"></a>使用 Expo CLI</h2><p>假设已安装 Node.js 12 LTS或更高版本，则可以使用npm安装Expo CLI命令行实用程序：</p><pre><code class="powershell">npm install -g expo-cli
+</code></pre><p>然后运行以下命令，创建一个名为“rn-basics”本地项目：</p><pre><code class="powershell">expo init rn-basic
+
+cd rn-basic
+npm start # 也可以使用命令: expo start
+</code></pre><p>此时会启动一个开发服务器。</p><p><strong>如果你不希望安装脚手架，可以通过 npx 创建项目</strong></p><pre><code class="powershell">npx expo init rn-basic
+</code></pre><h2 id="运行-React-Native-应用程序"><a href="#运行-React-Native-应用程序" class="headerlink" title="运行 React Native 应用程序"></a>运行 React Native 应用程序</h2><p>在iOS或Android手机上安装[Expo](<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmV4cG8uaW8vdmVyc2lvbnMvdjM2LjAuMC9nZXQtc3RhcnRlZC9pbnN0YWxsYXRpb24v">https://docs.expo.io/versions/v36.0.0/get-started/installation/</span> Expo)客户端应用程序，并连接到与计算机相同的无线网络（Wifi热点）。在Android上，使用Expo应用程序从终端扫描二维码以打开项目。在iOS上，按照屏幕上的说明（一般为使用相机扫描）获取链接。</p><pre><code class="powershell">cd rn-basic
+yarn start
+
+ Press a │ open Android
+› Press i │ open iOS simulator
+› Press w │ open web
+
+› Press r │ reload app
+› Press m │ toggle menu
+› Press d │ show developer tools
+› shift+d │ toggle auto opening developer tools on startup (enabled)
+</code></pre><p>下载真机测试工具： <span class="exturl" data-url="aHR0cHM6Ly9leHBvLmRldi90b29scw==">https://expo.dev/tools</span></p><p><strong>前提条件是手机和电脑处于同一个局域网</strong></p><p>运行项目生成一个二维码，andorid手机直接使用软件的扫一扫功能，扫描二维码即可</p><p>ios使用 照相机应用程序 扫描二维码，注意手机端的提示信息，直接点击打开即可</p><h3 id="修改你的程序"><a href="#修改你的程序" class="headerlink" title="修改你的程序"></a>修改你的程序</h3><p>现在你已经成功运行了应用程序，让我们修改一下代码试试。在文本编辑器中打开 App.js 并编辑一些行。保存更改后，应用程序会自动重新加载。</p><h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p>React Native 与 React类似，但它使用原生(native)组件而不是基于浏览器(web)组件作为构建块。因此，要了解 React Native 应用程序的基本结构，您需要了解一些基本的 React 概念，如JSX、组件、状态和属性。如果你已经了解 React，那么你仍然需要学习一些 React Native 特定的东西，比如 原生(Native) 组件。本教程面向所有人群，无论你是否有 React 经验。</p><h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p>编程界的老习惯，先来个 Hello World 尝尝鲜：</p><pre><code class="jsx">// 01 HelloWorldApp.tsx
+import &#123; StyleSheet, Text, View, SafeAreaView, StatusBar &#125; from &#39;react-native&#39;;
+
+// 文字必须使用Text组件包裹
+// SafeAreaView ios 独有的专属的 安全区域
+// StatusBar 状态栏组件
+export default function App() &#123;
+  return (
+    &lt;SafeAreaView style=&#123;styles.container&#125;&gt;
+      &lt;View style=&#123;styles.box&#125;&gt;
+        &lt;StatusBar /&gt;
+        &lt;Text&gt;hello world！!&lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/SafeAreaView&gt;
+  );
+&#125;
+// StyleSheet 生成当前组件的样式
+// rn中默认使用flex布局，不需要指明 display: flex
+// 并且默认的是垂直方向的弹性盒布局
+const styles = StyleSheet.create(&#123;
+  container: &#123;
+    flex: 1,
+    backgroundColor: &#39;#f66&#39;,
+    // alignItems: &#39;center&#39;,
+    // justifyContent: &#39;center&#39;,
+  &#125;,
+  box: &#123;
+    flex: 1,
+    backgroundColor: &#39;#fff&#39;
+  &#125;
+&#125;);
+
+</code></pre><p>如果你感到好奇，这不就是React程序吗？是的，可以直接在web模拟器中运行这段代码。也可以将其粘贴到App.tsx文件中，以便在本地计算机上创建真正的原生应用程序。</p><blockquote><p>rn中不要使用class作为样式处理</p></blockquote><h2 id="奇葩的语法"><a href="#奇葩的语法" class="headerlink" title="奇葩的语法"></a>奇葩的语法</h2><p>这里的一些内容看来可能不像 JavaScript。别慌。这就是未来。</p><p>首先，ES2015（也称为ES6）是对JavaScript的一系列改进，ECMAScript 现在是官方标准的一部分，但还没有得到所有浏览器的支持。React Native ships 支持 ES2015，因此你可以使用这些内容而不必担心兼容性。上述示例中的import、from、class 和 extends 都是ES2015的特性。如果你不熟悉ES2015，你也可以通过阅读本教程中的示例代码来了解它。</p><p>在这个代码示例中，另一个不寻常的事情是<code>&lt;View&gt;&lt;Text&gt;Hello world！&lt;/Text&gt;&lt;/View&gt;</code>。这是JSX——一种在JavaScript中嵌入XML的语法。许多框架使用一种专门的模板语言，允许您在标记语言中嵌入代码。在React中，没有使用模板。JSX允许您在代码中编写标记语言。它看起来像web上的HTML，但这里使用的是React组件，而不是像<code>&lt;div&gt;</code> 或 <code>&lt;span&gt;</code>这样的 HTML 标签。在本例中，<text>是一个内置组件，它显示一些文本，类似于<code>&lt;div&gt;</code>或<code>&lt;span&gt;</code>。</text></p><h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><p>这段代码定义了HelloWorld App，这是一个新组件。当你在构建一个 React 本地应用程序时，你将大量地生成新组件。你在屏幕上看到的任何东西都是某种组件。</p><h1 id="props"><a href="#props" class="headerlink" title="props"></a>props</h1><p>大多数组件在创建时都可以使用不同的参数进行自定义。这些创建参数称为props，是properties的缩写。<br>例如，一个基本的React Native 组件 Image。创建图像时，可以使用名为source的属性来控制它显示的图像。</p><p><span class="exturl" data-url="aHR0cHM6Ly93d3cucmVhY3QtbmF0aXZlLmNuL2RvY3MvaW1hZ2U=">官方文档</span></p><p>用于显示多种不同类型图片的 React 组件，包括网络图片、静态资源、临时的本地图片、以及本地磁盘上的图片（如相册）等。</p><pre><code class="js">// 02ImageApp.tsx
+import &#123; 
+  StyleSheet, 
+  Text, 
+  View, 
+  SafeAreaView, 
+  StatusBar, 
+  Image 
+&#125; from &#39;react-native&#39;;
+
+// 文字必须使用Text组件包裹
+// SafeAreaView ios 独有的专属的 安全区域
+// StatusBar 状态栏组件
+export default function App() &#123;
+  return (
+    &lt;SafeAreaView style=&#123;styles.container&#125;&gt;
+      &lt;View style=&#123;styles.box&#125;&gt;
+        &lt;StatusBar /&gt;
+        &lt;Text&gt;访问静态资源图片&lt;/Text&gt; 
+        &lt;Image 
+          style=&#123; styles.staticPic &#125;
+          source=&#123;
+            require(&#39;./assets/by.png&#39;)
+          &#125; /&gt;
+        &lt;Text&gt;访问网络资源&lt;/Text&gt; 
+        &lt;Image
+          style=&#123; styles.staticPic &#125;
+          source=&#123;&#123;
+            uri: 'https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png'
+          &#125;&#125; /&gt;
+        &lt;Text&gt;base64格式图片&lt;/Text&gt; 
+        &lt;Image
+          style=&#123; styles.staticPic &#125;
+          source=&#123;&#123;
+            uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg=='
+          &#125;&#125; /&gt;
+      &lt;/View&gt;
+    &lt;/SafeAreaView&gt;
+  );
+&#125;
+// StyleSheet 生成当前组件的样式
+// rn中默认使用flex布局，不需要指明 display: flex
+// 并且默认的是垂直方向的弹性盒布局
+const styles = StyleSheet.create(&#123;
+  container: &#123;
+    flex: 1,
+    backgroundColor: &#39;#f66&#39;,
+    // alignItems: &#39;center&#39;,
+    // justifyContent: &#39;center&#39;,
+  &#125;,
+  box: &#123;
+    flex: 1,
+    backgroundColor: &#39;#fff&#39;
+  &#125;,
+  staticPic: &#123;
+    width: 100,
+    height: 100
+  &#125;
+&#125;);
+
+</code></pre><p>注意将变量嵌入到JSX中。您可以将任何JavaScript表达式放在JSX中的大括号中。<br>你自己的组件也可以使用 props。这允许你创建一个在应用程序中的许多不同位置使用的组件，每个组件的属性可以略有不同，获取值可以在渲染函数中引用This.props。下面是一个例子：</p><pre><code class="ts">// 03propsApp.tsx
+import &#123; 
+  StyleSheet, 
+  Text, 
+  View, 
+  SafeAreaView, 
+  StatusBar
+&#125; from &#39;react-native&#39;;
+
+const Gretter = (props: &#123; name: string &#125;) =&gt; &#123;
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;&#123; props.name &#125;&lt;/Text&gt;
+    &lt;/View&gt;
+  )
+&#125;
+
+export default function App() &#123;
+  return (
+    &lt;SafeAreaView style=&#123;styles.container&#125;&gt;
+      &lt;View style=&#123;styles.box&#125;&gt;
+        &lt;StatusBar /&gt;
+        &lt;Gretter name=&quot;张三&quot;&gt;&lt;/Gretter&gt;
+        &lt;Gretter name=&quot;李四&quot;&gt;&lt;/Gretter&gt;
+        &lt;Gretter name=&quot;王五&quot;&gt;&lt;/Gretter&gt;
+        &lt;Gretter name=&quot;赵六&quot;&gt;&lt;/Gretter&gt;
+      &lt;/View&gt;
+    &lt;/SafeAreaView&gt;
+  );
+&#125;
+const styles = StyleSheet.create(&#123;
+  container: &#123;
+    flex: 1,
+    backgroundColor: &#39;#f66&#39;
+  &#125;,
+  box: &#123;
+    flex: 1,
+    backgroundColor: &#39;#fff&#39;
+  &#125;
+&#125;);
+</code></pre><p>我们在Greeter组件中将name作为一个属性来定制，这样可以复用这一组件来制作各种不同的“问候语”。上面的例子把Greeter组件写在 JSX 语句中，用法和内置组件并无二致——这正是 React 体系的魅力所在——如果你想搭建一套自己的基础 UI 框架，那就放手做吧！</p><p>上面的例子出现了一个新的名为 <code>View</code> 的组件。<code>View</code> 常用作其他组件的容器，来帮助控制布局和样式。</p><p>仅仅使用 <code>props</code> 和基础的<code>Text</code>、<code>Image</code> 以及 <code>View</code>组件，你就已经足以编写各式各样的 UI 组件了。要学习如何动态修改你的界面，那就需要进一步学习 State（状态）的概念。</p><p>上诉案例中涉及了 父子组件的传值，有必要<strong>校验父组件给子组件的传值问题</strong></p><p>&#x2F;&#x2F; vue 数据类型。设置默认值 必传项 自定义验证器</p><p>&#x2F;&#x2F; react 自react15.5版本开始，从react中分离出了一个 prop-types 模块</p><blockquote><p>本案例中使用ts作为脚本，不需要使用 <code>prop-types</code>模块</p></blockquote><h1 id="State"><a href="#State" class="headerlink" title="State"></a>State</h1><p>我们使用两种数据来控制一个组件：props 和 state。props是在父组件中指定，而且一经指定，在被指定的组件的生命周期中则不再改变。对于需要改变的数据，我们需要使用state。</p><p>一般来说，你需要在class中声明一个state对象，然后在需要修改时调用setState方法。</p><p>假如我们需要制作一段不停闪烁的文字。文字内容本身在组件创建时就已经指定好了，所以文字内容应该是一个prop。而文字的显示或隐藏的状态（快速的显隐切换就产生了闪烁的效果）则是随着时间变化的，因此这一状态应该写到state中。</p><pre><code class="typescript">// 04 BlinkApp.tsx
+import &#123; useEffect, useState &#125; from &#39;react&#39;;
+import &#123; 
+  StyleSheet, 
+  Text, 
+  View, 
+  SafeAreaView, 
+  StatusBar
+&#125; from &#39;react-native&#39;;
+const getColor = () =&gt; &#123;
+  const color = `rgba($&#123;100 + Math.random()* 155&#125; , 
+  $&#123;100 + Math.random()* 155&#125;,
+  $&#123;100 + Math.random()* 155&#125;,
+  0.6)`
+  return color
+&#125;
+const Blink = (props: &#123; text: string &#125;) =&gt; &#123;
+  return (
+    &lt;View&gt;
+      &lt;Text style=&#123;&#123; ...styles.text, color: getColor() &#125;&#125;&gt;&#123;props.text&#125;&lt;/Text&gt;
+    &lt;/View&gt;
+  )
+&#125;
+
+export default function App() &#123;
+  const [show, setShow] = useState(true)
+
+  useEffect(() =&gt; &#123;
+    setInterval(() =&gt; &#123;
+      setShow(!show)
+    &#125;, 2000)
+  &#125;, [])
+  return (
+    &lt;SafeAreaView style=&#123;styles.container&#125;&gt;
+      &lt;View style=&#123;styles.box&#125;&gt;
+        &lt;StatusBar /&gt;
+        &#123;
+          show ? &lt;Blink text = &quot;这&quot;&gt;&lt;/Blink&gt; : null
+        &#125;
+        &#123;
+          show ? &lt;Blink text = &quot;是&quot;&gt;&lt;/Blink&gt; : null
+        &#125;
+        &#123;
+          show ? &lt;Blink text = &quot;字&quot;&gt;&lt;/Blink&gt; : null
+        &#125;
+      &lt;/View&gt;
+    &lt;/SafeAreaView&gt;
+  );
+&#125;
+const styles = StyleSheet.create(&#123;
+  container: &#123;
+    flex: 1,
+    backgroundColor: &#39;#f66&#39;
+  &#125;,
+  box: &#123;
+    flex: 1,
+    backgroundColor: &#39;#fff&#39;,
+    justifyContent: &#39;center&#39;,
+    alignItems: &#39;center&#39;
+  &#125;,
+  text: &#123;
+    fontSize: 32
+  &#125;
+&#125;);
+</code></pre><p>实际开发中，我们一般不会在定时器函数（setInterval、setTimeout 等）中来操作 state。典型的场景是在接收到服务器返回的新数据，或者在用户输入数据之后。你也可以使用一些“状态容器”比如<code>Redux</code>来统一管理数据流。</p><p>每次调用setState时，App 都会重新执行 render 方法重新渲染。这里我们使用定时器来不停调用setState，于是组件就会随着时间变化不停地重新渲染。</p><p>State 的工作原理和 React.js 完全一致，所以对于处理 state 的一些更深入的细节，你可以参阅React.Component API。</p><h1 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h1><p>在 React Native 中，你并不需要学习什么特殊的语法来定义样式。我们仍然是使用 JavaScript 来写样式。所有的核心组件都接受名为 style 的属性。这些样式名基本上是遵循了 web 上的 CSS 的命名，只是按照 JS 的语法要求使用了驼峰命名法，例如将 background-color 改为 backgroundColor。</p><p>style属性可以是一个普通的 JavaScript 对象。这是最简单的用法，因而在示例代码中很常见。你还可以传入一个数组——在数组中位置居后的样式对象比居前的优先级更高，这样你可以间接实现样式的继承。</p><p>实际开发中组件的样式会越来越复杂，我们建议使用 <code>StyleSheet.create</code> 来集中定义组件的样式。比如像下面这样：</p><pre><code class="js">// 同上述案例
+</code></pre><p>常见的做法是按顺序声明和使用style属性，以借鉴 CSS 中的“层叠”做法（即后声明的属性会覆盖先声明的同名属性）。</p><blockquote><p>react</p><p>cnpm i styled-components @types&#x2F;styled-components -S</p><p>import styled from ‘styled-components’</p><p>const Button &#x3D; styled.button&#96;</p><p>​	width: 100,</p><p>​	height: 100</p><p><button></button></p></blockquote><blockquote><p><strong>以下代码在现阶段版本（ts环境下，编译不通过）可以使用，但是不赞成</strong></p></blockquote><pre><code class="jsx">import &#123; useEffect, useState &#125; from &#39;react&#39;;
+import &#123; 
+  StyleSheet, 
+  Text, 
+  View, 
+  SafeAreaView, 
+  StatusBar
+&#125; from &#39;react-native&#39;;
+import styled from &#39;styled-components&#39;
+
+const StyleText = styled.Text`
+  font-size: 50px;
+  color: #f66
+`
+
+export default function App() &#123;
+  return (
+    &lt;SafeAreaView style=&#123;styles.container&#125;&gt;
+      &lt;View style=&#123;styles.box&#125;&gt;
+        &lt;StatusBar /&gt;
+        &lt;StyleText&gt;你好&lt;/StyleText&gt;
+      &lt;/View&gt;
+    &lt;/SafeAreaView&gt;
+  );
+&#125;
+const styles = StyleSheet.create(&#123;
+  container: &#123;
+    flex: 1,
+    backgroundColor: &#39;#f66&#39;
+  &#125;,
+  box: &#123;
+    flex: 1,
+    backgroundColor: &#39;#fff&#39;,
+    justifyContent: &#39;center&#39;,
+    alignItems: &#39;center&#39;
+  &#125;,
+  text: &#123;
+    fontSize: 32
+  &#125;
+&#125;);
+</code></pre><h1 id="宽度-Width-和-高度-Height"><a href="#宽度-Width-和-高度-Height" class="headerlink" title="宽度(Width) 和 高度(Height)"></a>宽度(Width) 和 高度(Height)</h1><p>组件的高度和宽度决定了其在屏幕上显示的尺寸。</p><h2 id="指定宽高"><a href="#指定宽高" class="headerlink" title="指定宽高"></a>指定宽高</h2><p>最简单的给组件设定尺寸的方式就是在样式中指定固定的 <code>width</code> 和 <code>height</code>。React Native 中的尺寸都是无单位的，表示的是与设备像素密度无关的逻辑像素点。</p><pre><code class="js">import React, &#123; Component &#125; from &#39;react&#39;
+import &#123; View &#125; from &#39;react-native&#39;
+
+export default class App extends Component &#123;
+  render() &#123;
+    return (
+      &lt;View&gt;
+        &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: 'powderblue'&#125;&#125; /&gt;
+        &lt;View style=&#123;&#123;width: 100, height: 100, backgroundColor: 'skyblue'&#125;&#125; /&gt;
+        &lt;View style=&#123;&#123;width: 150, height: 150, backgroundColor: 'steelblue'&#125;&#125; /&gt;
+      &lt;/View&gt;
+    )
+  &#125;
+&#125;
+</code></pre><p>这样给组件设置尺寸也是一种常见的模式，比如要求在不同尺寸的屏幕上都显示成一样的大小。</p><h2 id="弹性（Flex）宽高"><a href="#弹性（Flex）宽高" class="headerlink" title="弹性（Flex）宽高"></a>弹性（Flex）宽高</h2><p>在组件样式中使用flex可以使其在可利用的空间中动态地扩张或收缩。一般而言我们会使用flex:1来指定某个组件扩张以撑满所有剩余的空间。如果有多个并列的子组件使用了flex:1，则这些子组件会平分父容器中剩余的空间。如果这些并列的子组件的flex值不一样，则谁的值更大，谁占据剩余空间的比例就更大（即占据剩余空间的比等于并列组件间flex值的比）。</p><blockquote><p>组件能够撑满剩余空间的前提是其父容器的尺寸不为零。如果父容器既没有固定的width和height，也没有设定flex，则父容器的尺寸为零。其子组件如果使用了flex，也是无法显示的。</p></blockquote><pre><code class="js">import React, &#123; Component &#125; from &#39;react&#39;
+import &#123; View &#125; from &#39;react-native&#39;
+
+export default class App extends Component &#123;
+  render() &#123;
+    return (
+      // 试试去掉父 View 中的`flex: 1`。
+      // 则父View不再具有尺寸，因此子组件也无法再撑开。
+      // 然后再用`height: 300` 来代替父 View 的 `flex: 1` 试试看？
+      &lt;View style=&#123;&#123;flex: 1&#125;&#125;&gt;
+        &lt;View style=&#123;&#123;flex: 1, backgroundColor: 'powderblue'&#125;&#125; /&gt;
+        &lt;View style=&#123;&#123;flex: 2, backgroundColor: 'skyblue'&#125;&#125; /&gt;
+        &lt;View style=&#123;&#123;flex: 3, backgroundColor: 'steelblue'&#125;&#125; /&gt;
+      &lt;/View&gt;
+    )
+  &#125;
+&#125;
+</code></pre><h1 id="使用-flexbox-布局"><a href="#使用-flexbox-布局" class="headerlink" title="使用 flexbox 布局"></a>使用 flexbox 布局</h1><p>我们在 React Native 中使用 flexbox 规则来指定某个组件的子元素的布局。Flexbox 可以在不同屏幕尺寸上提供一致的布局结构。</p><p>一般来说，使用 <code>flexDirection</code>、<code>alignItems</code> 和 <code>justifyContent</code> 三个样式属性就已经能满足大多数布局需求。</p><blockquote><p>React Native 中的 Flexbox 的工作原理和 web 上的 CSS 基本一致，当然也存在少许差异。首先是默认值不同：flexDirection的默认值是column而不是row，而flex也只能指定一个数字值。</p></blockquote><h2 id="Flex"><a href="#Flex" class="headerlink" title="Flex"></a>Flex</h2><p>flex 属性决定元素在主轴上如何填满可用区域。整个区域会根据每个元素设置的flex属性值被分割成多个部分。</p><p>在下面的例子中，在设置了 <code>flex: 1</code> 的容器view中，有红色，黄色和绿色三个子 <code>view</code>。红色 <code>view</code> 设置了 <code>flex: 1</code>，黄色 <code>view</code> 设置了 <code>flex: 2</code>，绿色 <code>view</code> 设置了 <code>flex: 3</code>。<code>1+2+3 = 6</code>，这意味着红色 <code>view</code> 占据整个区域的 <code>1/6</code>，黄色 <code>view</code> 占据整个区域的 <code>2/6</code>，绿色 <code>view</code> 占据整个区域的<code>3/6</code>。</p><h2 id="Flex-Direction"><a href="#Flex-Direction" class="headerlink" title="Flex Direction"></a>Flex Direction</h2><p>在组件的 style 中指定 <code>flexDirection</code> 可以决定布局的主轴。子元素是应该沿着水平轴 (row) 方向排列，还是沿着竖直轴 (column) 方向排列呢？默认值是竖直轴 (column) 方向。</p><pre><code class="js">import React, &#123; Component &#125; from &#39;react&#39;
+import &#123; View &#125; from &#39;react-native&#39;
+
+export default class FlexDirectionBasics extends Component &#123;
+  render() &#123;
+    return (
+      // 尝试把`flexDirection`改为`column`看看
+      &lt;View style=&#123;&#123;flex: 1, flexDirection: 'row'&#125;&#125;&gt;
+        &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: 'powderblue'&#125;&#125; /&gt;
+        &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: 'skyblue'&#125;&#125; /&gt;
+        &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: 'steelblue'&#125;&#125; /&gt;
+      &lt;/View&gt;
+    )
+  &#125;
+&#125;
+</code></pre><h2 id="Layout-Direction"><a href="#Layout-Direction" class="headerlink" title="Layout Direction"></a>Layout Direction</h2><p>布局方向指定层次结构中的子项和文本的布局方向。布局方向也会影响边起点和终点所指的对象。默认情况下，React Native布局使用LTR布局方向。在这种模式下，开始是指左边，结束是指右边。</p><ul><li><p>LTR（默认值）文本和子级，并从左到右排列。应用的边距和填充元素的开头应用于左侧。</p></li><li><p>从右到左排列的RTL文本和子项。应用的边距和填充元素的开头应用于右侧。</p></li></ul><h2 id="Justify-Content"><a href="#Justify-Content" class="headerlink" title="Justify Content"></a>Justify Content</h2><p>在组件的 style 中指定 justifyContent 可以决定其子元素沿着主轴的排列方式。子元素是应该靠近主轴的起始端还是末尾段分布呢？亦或应该均匀分布？对应的这些可选项有：flex-start、center、flex-end、space-around、space-between 以及 space-evenly。</p><pre><code class="js">import React, &#123; Component &#125; from &#39;react&#39;
+import &#123; View &#125; from &#39;react-native&#39;
+
+export default class JustifyContentBasics extends Component &#123;
+  render() &#123;
+    return (
+      // 尝试把`justifyContent`改为`center`看看
+      // 尝试把`flexDirection`改为`row`看看
+      &lt;View style=&#123;&#123;
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+      &#125;&#125;&gt;
+        &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: 'powderblue'&#125;&#125; /&gt;
+        &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: 'skyblue'&#125;&#125; /&gt;
+        &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: 'steelblue'&#125;&#125; /&gt;
+      &lt;/View&gt;
+    )
+  &#125;
+&#125;
+</code></pre><h1 id="使用长列表"><a href="#使用长列表" class="headerlink" title="使用长列表"></a>使用长列表</h1><p>React Native 提供了几个适用于展示长列表数据的组件，一般而言我们会选用FlatList或是SectionList。</p><p>FlatList组件用于显示一个垂直的滚动列表，其中的元素之间结构近似而仅数据不同。</p><p>FlatList更适于长列表数据，且元素个数可以增删。和ScrollView不同的是，FlatList并不立即渲染所有元素，而是优先渲染屏幕上可见的元素。</p><p>FlatList组件必须的两个属性是data和renderItem。data是列表的数据源，而renderItem则从数据源中逐个解析数据，然后返回一个设定好格式的组件来渲染。</p><p>下面的例子创建了一个简单的FlatList，并预设了一些模拟数据。首先是初始化FlatList所需的data，其中的每一项（行）数据之后都在renderItem中被渲染成了Text组件，最后构成整个FlatList。</p><pre><code class="ts">import React from &#39;react&#39;
+import &#123; View, Text, SafeAreaView, StatusBar, FlatList &#125; from &#39;react-native&#39;
+
+export default function App () &#123;
+  const data = [
+    &#123;key: &#39;Devin&#39;&#125;,
+    &#123;key: &#39;Dan&#39;&#125;,
+    &#123;key: &#39;Dominic&#39;&#125;,
+    &#123;key: &#39;Jackson&#39;&#125;,
+    &#123;key: &#39;James&#39;&#125;,
+    &#123;key: &#39;Joel&#39;&#125;,
+    &#123;key: &#39;John&#39;&#125;,
+    &#123;key: &#39;Jillian&#39;&#125;,
+    &#123;key: &#39;Jimmy&#39;&#125;,
+    &#123;key: &#39;Julie&#39;&#125;,
+  ]
+  // item需要解构后得到
+  const renderItem = (&#123; item &#125;) =&gt; &#123;
+    return (&lt;Text&gt;&#123; item.key &#125;&lt;/Text&gt;)
+  &#125;
+  return (
+    &lt;View&gt;
+      &#123;/* SafeAreaView 只针对ios有效的 */&#125;
+      &lt;SafeAreaView&gt;
+        &#123;/* StatusBar可以针对android有效 */&#125;
+        &lt;StatusBar /&gt;
+        &lt;FlatList
+          data = &#123; data &#125;
+          renderItem = &#123; renderItem &#125;
+        &gt;&lt;/FlatList&gt;
+      &lt;/SafeAreaView&gt;
+    &lt;/View&gt;
+  )
+&#125;
+</code></pre><p><strong>实现上拉加载下拉刷新返回顶部</strong></p><pre><code class="ts">import React, &#123; useEffect, useRef, useState &#125; from &quot;react&quot;;
+import &#123; StyleSheet, Text, View, SafeAreaView, SectionList, StatusBar, TouchableHighlight &#125; from &quot;react-native&quot;;
+
+
+const App = () =&gt; &#123;
+  const [list, setList] = useState([])
+  const [letterList, setLetterList] = useState([])
+  const letterRef = useRef()
+  useEffect(() =&gt; &#123;
+    fetch(&#39;http://121.89.205.189:3001/city/sortCity.json&#39;)
+      .then(res =&gt; res.json())
+      .then(res =&gt; &#123;
+        // console.log(&#39;1&#39;, res)
+        setList(res)
+        const arr = []
+        res.forEach(item =&gt; &#123;
+          arr.push(item.letter)
+        &#125;);
+        console.log(&#39;2&#39;, arr)
+        setLetterList(arr)
+      &#125;)
+  &#125;, [])
+  const renderItem = (&#123; item &#125;) =&gt; (
+    &lt;View style=&#123;styles.item&#125;&gt;
+      &lt;Text style=&#123;styles.title&#125;&gt;&#123;item.name&#125;&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+
+  const scrollToLocation = (index) =&gt; &#123;
+    letterRef.current.scrollToLocation(&#123;
+      sectionIndex: index,
+      itemIndex: 0,
+      viewPosition: 1
+    &#125;)
+  &#125;
+  return (
+    &lt;SafeAreaView style=&#123;styles.container&#125;&gt;
+      &lt;SectionList
+        sections=&#123;list&#125;
+        renderItem=&#123; renderItem &#125;
+        renderSectionHeader=&#123;(&#123; section: &#123; letter &#125; &#125;) =&gt; (
+          &lt;Text style=&#123;styles.header&#125;&gt;&#123;letter&#125;&lt;/Text&gt;
+        )&#125;
+        ref = &#123; letterRef &#125;
+      /&gt;
+      &lt;View style = &#123; styles.letterBox&#125;&gt;
+        &lt;View&gt;
+          &#123;
+            letterList.map((item, index) =&gt; &#123;
+              return (
+                &lt;TouchableHighlight
+                  key = &#123; index &#125;
+                  onPress=&#123; () =&gt; &#123;
+                    scrollToLocation(index)
+                  &#125;&#125;
+                &gt;
+
+                  &lt;View &gt;
+                    &lt;Text style=&#123;&#123; fontSize: 16&#125;&#125;&gt;&#123; item &#125;&lt;/Text&gt;
+                  &lt;/View&gt;
+                &lt;/TouchableHighlight&gt;
+              )
+            &#125;)
+          &#125;
+        &lt;/View&gt;
+      &lt;/View&gt;
+    &lt;/SafeAreaView&gt;
+  )
+&#125;;
+
+const styles = StyleSheet.create(&#123;
+  container: &#123;
+    flex: 1,
+    paddingTop: StatusBar.currentHeight,
+    marginHorizontal: 16,
+    position: &#39;relative&#39;
+  &#125;,
+  item: &#123;
+    backgroundColor: &quot;#f9c2ff&quot;,
+    padding: 20,
+    marginVertical: 8
+  &#125;,
+  header: &#123;
+    fontSize: 32,
+    backgroundColor: &quot;#fff&quot;
+  &#125;,
+  title: &#123;
+    fontSize: 24
+  &#125;,
+  letterBox: &#123;
+    position: &#39;absolute&#39;,
+    top: &#39;20%&#39;,
+    right: 0,
+    width: 20,
+    backgroundColor: &#39;#fff&#39;
+  &#125;
+&#125;);
+
+export default App;
+</code></pre><div class="tags"><a href="/tags/react/" rel="tag"><i class="ic i-tag"></i> react</a> <a href="/tags/ts/" rel="tag"><i class="ic i-tag"></i> ts</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i> </span><span class="text">更新于</span> <time title="修改时间：2022-11-11 00:09:01" itemprop="dateModified" datetime="2022-11-11T00:09:01+08:00">2022-11-11</time> </span><span id="React-Native/React-Native1/" class="item leancloud_visitors" data-flag-title="React Native学习第一天" title="阅读次数"><span class="icon"><i class="ic i-eye"></i> </span><span class="text">阅读次数</span> <span class="leancloud-visitors-count"></span> <span class="text">次</span></span></div><div class="reward"><button><i class="ic i-heartbeat"></i> 联系我</button><p>来交朋友吧！</p><div id="qr"><div><img data-src="/images/wechatpay.png" alt="叶星辰 微信支付"><p>微信支付</p></div><div><img data-src="/images/alipay.png" alt="叶星辰 支付宝"><p>支付宝</p></div><div><img data-src="/images/paypal.png" alt="叶星辰 QQ"><p>QQ</p></div></div></div><div id="copyright"><ul><li class="author"><strong>本文作者： </strong>叶星辰 <i class="ic i-at"><em>@</em></i>永不陨落的星辰</li><li class="link"><strong>本文链接：</strong> <a href="https://www.yexingcheng.com/React-Native/React-Native1/" title="React Native学习第一天">https://www.yexingcheng.com/React-Native/React-Native1/</a></li><li class="license"><strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/interview/wrapper-object/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicmnywqgpj20zk0m8dwx.jpg" title="js中包装对象"><span class="type">上一篇</span> <span class="category"><i class="ic i-flag"></i> 面试用</span><h3>js中包装对象</h3></a></div><div class="item right"></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B5%B7%E6%AD%A5%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">起步：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Expo-CLI"><span class="toc-number">1.1.</span> <span class="toc-text">使用 Expo CLI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C-React-Native-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.2.</span> <span class="toc-text">运行 React Native 应用程序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E4%BD%A0%E7%9A%84%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.2.1.</span> <span class="toc-text">修改你的程序</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">2.</span> <span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hello-World"><span class="toc-number">2.1.</span> <span class="toc-text">Hello World</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A5%87%E8%91%A9%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="toc-number">2.2.</span> <span class="toc-text">奇葩的语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6"><span class="toc-number">2.3.</span> <span class="toc-text">组件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#props"><span class="toc-number">3.</span> <span class="toc-text">props</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#State"><span class="toc-number">4.</span> <span class="toc-text">State</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F"><span class="toc-number">5.</span> <span class="toc-text">样式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%BD%E5%BA%A6-Width-%E5%92%8C-%E9%AB%98%E5%BA%A6-Height"><span class="toc-number">6.</span> <span class="toc-text">宽度(Width) 和 高度(Height)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E5%AE%9A%E5%AE%BD%E9%AB%98"><span class="toc-number">6.1.</span> <span class="toc-text">指定宽高</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%B9%E6%80%A7%EF%BC%88Flex%EF%BC%89%E5%AE%BD%E9%AB%98"><span class="toc-number">6.2.</span> <span class="toc-text">弹性（Flex）宽高</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-flexbox-%E5%B8%83%E5%B1%80"><span class="toc-number">7.</span> <span class="toc-text">使用 flexbox 布局</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Flex"><span class="toc-number">7.1.</span> <span class="toc-text">Flex</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flex-Direction"><span class="toc-number">7.2.</span> <span class="toc-text">Flex Direction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Layout-Direction"><span class="toc-number">7.3.</span> <span class="toc-text">Layout Direction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Justify-Content"><span class="toc-number">7.4.</span> <span class="toc-text">Justify Content</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E9%95%BF%E5%88%97%E8%A1%A8"><span class="toc-number">8.</span> <span class="toc-text">使用长列表</span></a></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li class="active"><a href="/React-Native/React-Native1/" rel="bookmark" title="React Native学习第一天">React Native学习第一天</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="image" itemprop="image" alt="叶星辰" data-src="/images/avatar.jpg"><p class="name" itemprop="name">叶星辰</p><div class="description" itemprop="description">温柔正确的人总是难以生存，因为这个世界既不温柔 也不正确</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">39</span> <span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">8</span> <span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">17</span> <span class="name">标签</span></a></div></nav><div class="social"><span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NhMW1EMHduMQ==" title="https:&#x2F;&#x2F;github.com&#x2F;Ca1mD0wn1"><i class="ic i-github"></i></span> <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9VZmRIbw==" title="https:&#x2F;&#x2F;twitter.com&#x2F;UfdHo"><i class="ic i-twitter"></i></span> <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9tZW5nLXhpbmcteW91LWppLXNpLXl1ZS1odWFuZy0yNw==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;meng-xing-you-ji-si-yue-huang-27"><i class="ic i-zhihu"></i></span> <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTUwMjkxOTQ0NQ==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;502919445"><i class="ic i-cloud-music"></i></span> <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS83NTc4MjU1ODg1" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7578255885"><i class="ic i-weibo"></i></span> <span class="exturl item email" data-url="aHR0cHM6Ly9tYWlsLmdvb2dsZS5jb20vbWFpbC91LzAvI2luYm94" title="https:&#x2F;&#x2F;mail.google.com&#x2F;mail&#x2F;u&#x2F;0&#x2F;#inbox"><i class="ic i-envelope"></i></span></div><ul class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item"><a href="/about/" rel="section"><i class="ic i-user"></i>关于</a></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li><li class="item"><a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a></li><li class="item"><a href="/links/" rel="section"><i class="ic i-magic"></i>links</a></li></ul></div></div></div><ul id="quick"><li class="prev pjax"></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/vue3%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" title="分类于 vue3移动端项目开发">vue3移动端项目开发</a></div><span><a href="/vue-mobile/14/" title="vue-mobile项目开发流程第十四部分(实现kind和user页面)">vue-mobile项目开发流程第十四部分(实现kind和user页面)</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/vue3%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" title="分类于 vue3移动端项目开发">vue3移动端项目开发</a></div><span><a href="/vue-mobile/5/" title="vue-mobile项目开发流程第五部分(封装数据请求)">vue-mobile项目开发流程第五部分(封装数据请求)</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Screeps/" title="分类于 screeps">screeps</a></div><span><a href="/Screeps/chinese/" title="screeps汉化（steam)">screeps汉化（steam)</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" title="分类于 微信小程序">微信小程序</a></div><span><a href="/wx-app/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/" title="微信公众号的开发">微信公众号的开发</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/react%E5%AD%A6%E4%B9%A0/" title="分类于 react学习">react学习</a></div><span><a href="/react-study/5/" title="React学习第五天">React学习第五天</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/vue3%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" title="分类于 vue3移动端项目开发">vue3移动端项目开发</a></div><span><a href="/vue-mobile/11/" title="vue-mobile项目开发流程第十一部分(实现shopcar功能)">vue-mobile项目开发流程第十一部分(实现shopcar功能)</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/react%E5%AD%A6%E4%B9%A0/" title="分类于 react学习">react学习</a></div><span><a href="/react-study/6/" title="React学习第六天">React学习第六天</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/interview/" title="分类于 面试用">面试用</a></div><span><a href="/interview/wrapper-object/" title="js中包装对象">js中包装对象</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Screeps/" title="分类于 screeps">screeps</a></div><span><a href="/Screeps/action1/" title="screeps日记 part1">screeps日记 part1</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/vue3%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" title="分类于 vue3移动端项目开发">vue3移动端项目开发</a></div><span><a href="/vue-mobile/13/" title="vue-mobile项目开发流程第十三部分(实现提交订单功能)">vue-mobile项目开发流程第十三部分(实现提交订单功能)</a></span></li></ul></div><div><h2>最新评论</h2><ul class="leancloud-recent-comment"></ul></div></div><div class="status"><div class="copyright">&copy; 2021 – <span itemprop="copyrightYear">2022</span> <span class="with-love"><i class="ic i-sakura rotate"></i> </span><span class="author" itemprop="copyrightHolder">叶星辰 @ 永不陨落的星辰</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i> </span><span title="站点总字数">640k 字</span> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="ic i-coffee"></i> </span><span title="站点阅读时长">9:42</span></div><div class="powered-by">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL={path:"React-Native/React-Native1/",favicon:{show:"星辰",hide:"你快回来"},search:{placeholder:"文章搜索",empty:"关于 「 ${query} 」，什么也没搜到",stats:"${time} ms 内找到 ${hits} 条结果"},valine:!0,fancybox:!0,copyright:'复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',ignores:[function(e){return e.includes("#")},function(e){return new RegExp(LOCAL.path+"$").test(e)}]}</script><script src="https://cdn.polyfill.io/v2/polyfill.js"></script><script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script><script src="/js/app.js?v=0.2.5"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({model:{jsonPath:"/live2dw/assets/miku.model.json"},display:{position:"right",width:250,height:500},mobile:{show:!1},log:!1,pluginJsPath:"lib/",pluginModelPath:"assets/",pluginRootPath:"live2dw/",tagMode:!1})</script></body></html><!-- rebuild by hrmmi -->
