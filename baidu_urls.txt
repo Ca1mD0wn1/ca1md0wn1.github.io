@@ -1,1 +1,1 @@
-https://www.yexingcheng.com/algorithm/sort/
+https://www.yexingcheng.com/JavaScript/object-oriented/
