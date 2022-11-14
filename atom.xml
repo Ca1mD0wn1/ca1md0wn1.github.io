@@ -8,8 +8,17 @@
     <author>
       <name>叶星辰</name>
     </author>
-    <updated>2022-11-14T12:28:45.829Z</updated>
+    <updated>2022-11-14T12:49:25.617Z</updated>
     <category term="github vue typescript" />
+    <entry>
+        <id>https://www.yexingcheng.com/JavaScript/promise/</id>
+        <title>JsPromise</title>
+        <link rel="alternate" href="https://www.yexingcheng.com/JavaScript/promise/"/>
+        <content type="html"></content>
+        <category term="JavaScript" scheme="https://www.yexingcheng.com/categories/JavaScript/" />
+        <category term="Js" scheme="https://www.yexingcheng.com/tags/Js/" />
+        <updated>2022-11-14T12:49:25.617Z</updated>
+    </entry>
     <entry>
         <id>https://www.yexingcheng.com/JavaScript/object-oriented/</id>
         <title>Js面向对象详解</title>
@@ -528,31 +537,6 @@ tmpStack：[3,23,31,34,92,98]&lt;/p&gt;
         <updated>2022-10-30T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://www.yexingcheng.com/Screeps/chinese/</id>
-        <title>screeps汉化（steam)</title>
-        <link rel="alternate" href="https://www.yexingcheng.com/Screeps/chinese/"/>
-        <content type="html">&lt;p&gt;如果你对 screeps 有所了解的话，那么你应该曾经听说过这个游戏的 steam 版本是基于 node 和 nw.js 进行开发的，说白了就是一个套壳浏览器，本质上还是一个 web 应用。既然是 web 应用，那么就可以用我们的 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwcyUzQSUyRiUyRmdyZWFzeWZvcmsub3JnJTJGemgtQ04lMkZzY3JpcHRzJTJGNDE2NjUxLXNjcmVlcHMtY2hpbmVzZS1wYWNr&#34;&gt;web 端汉化补丁&lt;/span&gt; 进行汉化。&lt;/p&gt;
-&lt;p&gt;这里我们看到默认是全英文版本，但由于本人是英语小白，又懒得去一个一个翻译，所以就想翻译这个界面&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;image-20221102235142846.png&#34; alt=&#34;image-20221102235142846&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;汉化步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#汉化步骤&#34;&gt;#&lt;/a&gt; 汉化步骤&lt;/h1&gt;
-&lt;p&gt;实际操作也非常的简单，首先我们通过 steam 打开 screeps 的本地目录：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;image-20221102235357536.png&#34; alt=&#34;image-20221102235357536&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;image-20221102235416601.png&#34; alt=&#34;image-20221102235416601&#34;&gt;&lt;/p&gt;
-&lt;p&gt;然后，你应该可以 &lt;strong&gt;找到一个名为 package.nw 的文件&lt;/strong&gt;，这个就是游戏的源码包。&lt;/p&gt;
-&lt;p&gt;然后用压缩文件的格式打开，这里我用的是 WINRAR&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;image-20221102235616013.png&#34; alt=&#34;image-20221102235616013&#34;&gt;&lt;/p&gt;
-&lt;p&gt;打开之后我们可以 &lt;strong&gt;找到一个名为 index.html 的文件，对其右键并选择编辑&lt;/strong&gt;，同理不要进行解压。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;image-20221102235706903.png&#34; alt=&#34;image-20221102235706903&#34;&gt;&lt;/p&gt;
-&lt;p&gt;然后我们添加汉化脚本到里面&lt;/p&gt;
-&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;https://screeps-cn.gitee.io/screeps-chinese-pack-release/main.js&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;defer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;此时我们进入游戏发现已经汉化完毕&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;image-20221103000423147.png&#34; alt=&#34;image-20221103000423147&#34;&gt;&lt;/p&gt;
-</content>
-        <category term="screeps" scheme="https://www.yexingcheng.com/categories/screeps/" />
-        <category term="javascript" scheme="https://www.yexingcheng.com/tags/javascript/" />
-        <category term="screeps" scheme="https://www.yexingcheng.com/tags/screeps/" />
-        <updated>2022-10-29T16:00:00.000Z</updated>
-    </entry>
-    <entry>
         <id>https://www.yexingcheng.com/React/react-router-params/</id>
         <title>React路由传参的几种方式</title>
         <link rel="alternate" href="https://www.yexingcheng.com/React/react-router-params/"/>
@@ -688,6 +672,31 @@ export default To;
         <updated>2022-10-29T16:00:00.000Z</updated>
     </entry>
     <entry>
+        <id>https://www.yexingcheng.com/Screeps/chinese/</id>
+        <title>screeps汉化（steam)</title>
+        <link rel="alternate" href="https://www.yexingcheng.com/Screeps/chinese/"/>
+        <content type="html">&lt;p&gt;如果你对 screeps 有所了解的话，那么你应该曾经听说过这个游戏的 steam 版本是基于 node 和 nw.js 进行开发的，说白了就是一个套壳浏览器，本质上还是一个 web 应用。既然是 web 应用，那么就可以用我们的 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwcyUzQSUyRiUyRmdyZWFzeWZvcmsub3JnJTJGemgtQ04lMkZzY3JpcHRzJTJGNDE2NjUxLXNjcmVlcHMtY2hpbmVzZS1wYWNr&#34;&gt;web 端汉化补丁&lt;/span&gt; 进行汉化。&lt;/p&gt;
+&lt;p&gt;这里我们看到默认是全英文版本，但由于本人是英语小白，又懒得去一个一个翻译，所以就想翻译这个界面&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;image-20221102235142846.png&#34; alt=&#34;image-20221102235142846&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;汉化步骤&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#汉化步骤&#34;&gt;#&lt;/a&gt; 汉化步骤&lt;/h1&gt;
+&lt;p&gt;实际操作也非常的简单，首先我们通过 steam 打开 screeps 的本地目录：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;image-20221102235357536.png&#34; alt=&#34;image-20221102235357536&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;image-20221102235416601.png&#34; alt=&#34;image-20221102235416601&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后，你应该可以 &lt;strong&gt;找到一个名为 package.nw 的文件&lt;/strong&gt;，这个就是游戏的源码包。&lt;/p&gt;
+&lt;p&gt;然后用压缩文件的格式打开，这里我用的是 WINRAR&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;image-20221102235616013.png&#34; alt=&#34;image-20221102235616013&#34;&gt;&lt;/p&gt;
+&lt;p&gt;打开之后我们可以 &lt;strong&gt;找到一个名为 index.html 的文件，对其右键并选择编辑&lt;/strong&gt;，同理不要进行解压。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;image-20221102235706903.png&#34; alt=&#34;image-20221102235706903&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后我们添加汉化脚本到里面&lt;/p&gt;
+&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;https://screeps-cn.gitee.io/screeps-chinese-pack-release/main.js&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;defer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;此时我们进入游戏发现已经汉化完毕&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;image-20221103000423147.png&#34; alt=&#34;image-20221103000423147&#34;&gt;&lt;/p&gt;
+</content>
+        <category term="screeps" scheme="https://www.yexingcheng.com/categories/screeps/" />
+        <category term="javascript" scheme="https://www.yexingcheng.com/tags/javascript/" />
+        <category term="screeps" scheme="https://www.yexingcheng.com/tags/screeps/" />
+        <updated>2022-10-29T16:00:00.000Z</updated>
+    </entry>
+    <entry>
         <id>https://www.yexingcheng.com/computer/rightPointNewMd/</id>
         <title>如何在右键菜单下添加一个新建markdown文件选项</title>
         <link rel="alternate" href="https://www.yexingcheng.com/computer/rightPointNewMd/"/>
@@ -721,7 +730,7 @@ export default To;
         <id>https://www.yexingcheng.com/Blog_introduction/Blog_introduction/</id>
         <title>Welcome!</title>
         <link rel="alternate" href="https://www.yexingcheng.com/Blog_introduction/Blog_introduction/"/>
-        <content type="html">&lt;p&gt;因为网络原因，如果有文章加载不出来的情况，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iZWl6ZV9hZG1pbi5naXRlZS5pbw==&#34;&gt;请点此访问&lt;/span&gt;&lt;/p&gt;
+        <content type="html">&lt;p&gt;因为本网站基于 Github Page, 需要科学上网，如因为网络原因，如果有文章加载不出来的情况，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iZWl6ZV9hZG1pbi5naXRlZS5pbw==&#34;&gt;请点此访问&lt;/span&gt;&lt;/p&gt;
 </content>
         <category term="index" scheme="https://www.yexingcheng.com/categories/index/" />
         <category term="index" scheme="https://www.yexingcheng.com/tags/index/" />

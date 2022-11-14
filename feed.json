@@ -7,6 +7,17 @@
     "home_page_url": "https://www.yexingcheng.com",
     "items": [
         {
+            "id": "https://www.yexingcheng.com/JavaScript/promise/",
+            "url": "https://www.yexingcheng.com/JavaScript/promise/",
+            "title": "JsPromise",
+            "date_published": "2022-11-14T12:49:25.617Z",
+            "content_html": "",
+            "tags": [
+                "JavaScript",
+                "Js"
+            ]
+        },
+        {
             "id": "https://www.yexingcheng.com/JavaScript/object-oriented/",
             "url": "https://www.yexingcheng.com/JavaScript/object-oriented/",
             "title": "Js面向对象详解",
@@ -138,18 +149,6 @@
             ]
         },
         {
-            "id": "https://www.yexingcheng.com/Screeps/chinese/",
-            "url": "https://www.yexingcheng.com/Screeps/chinese/",
-            "title": "screeps汉化（steam)",
-            "date_published": "2022-10-29T16:00:00.000Z",
-            "content_html": "<p>如果你对 screeps 有所了解的话，那么你应该曾经听说过这个游戏的 steam 版本是基于 node 和 nw.js 进行开发的，说白了就是一个套壳浏览器，本质上还是一个 web 应用。既然是 web 应用，那么就可以用我们的 <span class=\"exturl\" data-url=\"aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwcyUzQSUyRiUyRmdyZWFzeWZvcmsub3JnJTJGemgtQ04lMkZzY3JpcHRzJTJGNDE2NjUxLXNjcmVlcHMtY2hpbmVzZS1wYWNr\">web 端汉化补丁</span> 进行汉化。</p>\n<p>这里我们看到默认是全英文版本，但由于本人是英语小白，又懒得去一个一个翻译，所以就想翻译这个界面</p>\n<p><img data-src=\"image-20221102235142846.png\" alt=\"image-20221102235142846\"></p>\n<h1 id=\"汉化步骤\"><a class=\"anchor\" href=\"#汉化步骤\">#</a> 汉化步骤</h1>\n<p>实际操作也非常的简单，首先我们通过 steam 打开 screeps 的本地目录：</p>\n<p><img data-src=\"image-20221102235357536.png\" alt=\"image-20221102235357536\"></p>\n<p><img data-src=\"image-20221102235416601.png\" alt=\"image-20221102235416601\"></p>\n<p>然后，你应该可以 <strong>找到一个名为 package.nw 的文件</strong>，这个就是游戏的源码包。</p>\n<p>然后用压缩文件的格式打开，这里我用的是 WINRAR</p>\n<p><img data-src=\"image-20221102235616013.png\" alt=\"image-20221102235616013\"></p>\n<p>打开之后我们可以 <strong>找到一个名为 index.html 的文件，对其右键并选择编辑</strong>，同理不要进行解压。</p>\n<p><img data-src=\"image-20221102235706903.png\" alt=\"image-20221102235706903\"></p>\n<p>然后我们添加汉化脚本到里面</p>\n<figure class=\"highlight xml\"><figcaption data-lang=\"XML\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>script</span> <span class=\"token attr-name\">src</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>https://screeps-cn.gitee.io/screeps-chinese-pack-release/main.js<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">async</span> <span class=\"token attr-name\">defer</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>script</span><span class=\"token punctuation\">></span></span></pre></td></tr></table></figure><p>此时我们进入游戏发现已经汉化完毕</p>\n<p><img data-src=\"image-20221103000423147.png\" alt=\"image-20221103000423147\"></p>\n",
-            "tags": [
-                "screeps",
-                "javascript",
-                "screeps"
-            ]
-        },
-        {
             "id": "https://www.yexingcheng.com/React/react-router-params/",
             "url": "https://www.yexingcheng.com/React/react-router-params/",
             "title": "React路由传参的几种方式",
@@ -159,6 +158,18 @@
                 "react",
                 "react",
                 "router"
+            ]
+        },
+        {
+            "id": "https://www.yexingcheng.com/Screeps/chinese/",
+            "url": "https://www.yexingcheng.com/Screeps/chinese/",
+            "title": "screeps汉化（steam)",
+            "date_published": "2022-10-29T16:00:00.000Z",
+            "content_html": "<p>如果你对 screeps 有所了解的话，那么你应该曾经听说过这个游戏的 steam 版本是基于 node 和 nw.js 进行开发的，说白了就是一个套壳浏览器，本质上还是一个 web 应用。既然是 web 应用，那么就可以用我们的 <span class=\"exturl\" data-url=\"aHR0cHM6Ly9saW5rcy5qaWFuc2h1LmNvbS9nbz90bz1odHRwcyUzQSUyRiUyRmdyZWFzeWZvcmsub3JnJTJGemgtQ04lMkZzY3JpcHRzJTJGNDE2NjUxLXNjcmVlcHMtY2hpbmVzZS1wYWNr\">web 端汉化补丁</span> 进行汉化。</p>\n<p>这里我们看到默认是全英文版本，但由于本人是英语小白，又懒得去一个一个翻译，所以就想翻译这个界面</p>\n<p><img data-src=\"image-20221102235142846.png\" alt=\"image-20221102235142846\"></p>\n<h1 id=\"汉化步骤\"><a class=\"anchor\" href=\"#汉化步骤\">#</a> 汉化步骤</h1>\n<p>实际操作也非常的简单，首先我们通过 steam 打开 screeps 的本地目录：</p>\n<p><img data-src=\"image-20221102235357536.png\" alt=\"image-20221102235357536\"></p>\n<p><img data-src=\"image-20221102235416601.png\" alt=\"image-20221102235416601\"></p>\n<p>然后，你应该可以 <strong>找到一个名为 package.nw 的文件</strong>，这个就是游戏的源码包。</p>\n<p>然后用压缩文件的格式打开，这里我用的是 WINRAR</p>\n<p><img data-src=\"image-20221102235616013.png\" alt=\"image-20221102235616013\"></p>\n<p>打开之后我们可以 <strong>找到一个名为 index.html 的文件，对其右键并选择编辑</strong>，同理不要进行解压。</p>\n<p><img data-src=\"image-20221102235706903.png\" alt=\"image-20221102235706903\"></p>\n<p>然后我们添加汉化脚本到里面</p>\n<figure class=\"highlight xml\"><figcaption data-lang=\"XML\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>script</span> <span class=\"token attr-name\">src</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>https://screeps-cn.gitee.io/screeps-chinese-pack-release/main.js<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">async</span> <span class=\"token attr-name\">defer</span><span class=\"token punctuation\">></span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>script</span><span class=\"token punctuation\">></span></span></pre></td></tr></table></figure><p>此时我们进入游戏发现已经汉化完毕</p>\n<p><img data-src=\"image-20221103000423147.png\" alt=\"image-20221103000423147\"></p>\n",
+            "tags": [
+                "screeps",
+                "javascript",
+                "screeps"
             ]
         },
         {
@@ -178,7 +189,7 @@
             "url": "https://www.yexingcheng.com/Blog_introduction/Blog_introduction/",
             "title": "Welcome!",
             "date_published": "2022-09-30T16:00:00.000Z",
-            "content_html": "<p>因为网络原因，如果有文章加载不出来的情况，<span class=\"exturl\" data-url=\"aHR0cHM6Ly9iZWl6ZV9hZG1pbi5naXRlZS5pbw==\">请点此访问</span></p>\n",
+            "content_html": "<p>因为本网站基于 Github Page, 需要科学上网，如因为网络原因，如果有文章加载不出来的情况，<span class=\"exturl\" data-url=\"aHR0cHM6Ly9iZWl6ZV9hZG1pbi5naXRlZS5pbw==\">请点此访问</span></p>\n",
             "tags": [
                 "index",
                 "index"
