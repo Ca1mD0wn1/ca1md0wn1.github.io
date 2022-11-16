@@ -756,7 +756,7 @@ export default To;
         <id>https://www.yexingcheng.com/Blog_introduction/Blog_introduction/</id>
         <title>Welcome!</title>
         <link rel="alternate" href="https://www.yexingcheng.com/Blog_introduction/Blog_introduction/"/>
-        <content type="html">&lt;p&gt;因为本网站基于 Github Page, 需要科学上网，如因为网络原因，如果有文章加载不出来的情况，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iZWl6ZV9hZG1pbi5naXRlZS5pbw==&#34;&gt;请点此访问&lt;/span&gt;&lt;/p&gt;
+        <content type="html">&lt;p&gt;因为本网站需要科学上网，如因为网络原因，如果有文章加载不出来的情况，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iZWl6ZV9hZG1pbi5naXRlZS5pbw==&#34;&gt;请点此访问&lt;/span&gt;&lt;/p&gt;
 </content>
         <category term="index" scheme="https://www.yexingcheng.com/categories/index/" />
         <category term="index" scheme="https://www.yexingcheng.com/tags/index/" />
