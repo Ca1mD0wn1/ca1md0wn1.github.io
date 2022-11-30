@@ -547,8 +547,8 @@ console.log(arr[0],arr[1]);
 &lt;p&gt;使用这种方法，我们可以克服方法 1 的问题，即最小元素在数组中出现多次时出现的问题。&lt;br&gt;上述解决方案需要对输入数组进行两次遍历。 &lt;/p&gt;
 </content>
         <category term="数据结构" scheme="https://www.yexingcheng.com/categories/data-structures/" />
-        <category term="js" scheme="https://www.yexingcheng.com/tags/js/" />
         <category term="Array" scheme="https://www.yexingcheng.com/tags/Array/" />
+        <category term="js" scheme="https://www.yexingcheng.com/tags/js/" />
         <updated>2022-11-11T14:11:17.368Z</updated>
     </entry>
     <entry>

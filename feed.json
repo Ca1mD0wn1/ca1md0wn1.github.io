@@ -184,8 +184,8 @@
             "content_html": "<h1 id=\"查找数组中最小和次小的元素\"><a href=\"#查找数组中最小和次小的元素\" class=\"headerlink\" title=\"查找数组中最小和次小的元素\"></a>查找数组中最小和次小的元素</h1><h2 id=\"实例：\"><a href=\"#实例：\" class=\"headerlink\" title=\"实例：\"></a>实例：</h2><pre><code>输入：arr[] = &#123;12, 13, 1, 10, 34, 1&#125;\n输出：最小元素是 1 \n     第二个最小的元素是 10\n</code></pre>\n<h3 id=\"方法1（简单方法）\"><a href=\"#方法1（简单方法）\" class=\"headerlink\" title=\"方法1（简单方法）\"></a>方法1（简单方法）</h3><p>一个简单的解决方案是按照升序对数组进行排序。排序数组中的前两个元素将是两个最小的元素</p>\n<pre><code class=\"js\">let arr = [111, 13, 25, 9, 34, 1];\n\narr.sort((a,b)=&gt;a-b)\n\nconsole.log(arr[0],arr[1]);\n</code></pre>\n<p>如果最小元素出现不止一次，那么我们将不得不使用循环来打印唯一的最小元素和次小元素。 </p>\n<p><strong>时间复杂度：</strong> O(N*logN)<br><strong>辅助空间：</strong> O(1)</p>\n<h3 id=\"方法2\"><a href=\"#方法2\" class=\"headerlink\" title=\"方法2\"></a>方法2</h3><p>更好的<strong>解决方案</strong>是扫描阵列两次。在第一次遍历中找到最小元素。设此元素为 x。在第二次遍历中，找到大于 x 的最小元素。</p>\n<p>使用这种方法，我们可以克服方法 1 的问题，即最小元素在数组中出现多次时出现的问题。<br>上述解决方案需要对输入数组进行两次遍历。 </p>\n",
             "tags": [
                 "数据结构",
-                "js",
-                "Array"
+                "Array",
+                "js"
             ]
         },
         {
