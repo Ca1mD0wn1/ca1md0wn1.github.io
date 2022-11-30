@@ -534,8 +534,8 @@ console.log(sortStack(arr))
             <title>数组代码面试题</title>
             <link>https://www.yexingcheng.com/data-structures/array/</link>
             <category term="数据结构" scheme="https://www.yexingcheng.com/categories/data-structures/" />
-            <category term="js" scheme="https://www.yexingcheng.com/tags/js/" />
             <category term="Array" scheme="https://www.yexingcheng.com/tags/Array/" />
+            <category term="js" scheme="https://www.yexingcheng.com/tags/js/" />
             <pubDate>Fri, 11 Nov 2022 22:11:17 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;查找数组中最小和次小的元素&#34;&gt;&lt;a href=&#34;#查找数组中最小和次小的元素&#34; class=&#34;headerlink&#34; title=&#34;查找数组中最小和次小的元素&#34;&gt;&lt;/a&gt;查找数组中最小和次小的元素&lt;/h1&gt;&lt;h2 id=&#34;实例：&#34;&gt;&lt;a href=&#34;#实例：&#34; class=&#34;headerlink&#34; title=&#34;实例：&#34;&gt;&lt;/a&gt;实例：&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;输入：arr[] = &amp;#123;12, 13, 1, 10, 34, 1&amp;#125;
 输出：最小元素是 1 
