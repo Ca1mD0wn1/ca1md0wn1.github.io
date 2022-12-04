@@ -10,9 +10,22 @@
         </author>
         <description>如因为网络原因,如果有文章加载不出来的情况，请访问(https://beize_admin.gitee.io)</description>
         <language>zh-CN</language>
-        <pubDate>Wed, 30 Nov 2022 16:36:58 +0800</pubDate>
-        <lastBuildDate>Wed, 30 Nov 2022 16:36:58 +0800</lastBuildDate>
+        <pubDate>Fri, 02 Dec 2022 11:22:10 +0800</pubDate>
+        <lastBuildDate>Fri, 02 Dec 2022 11:22:10 +0800</lastBuildDate>
         <category term="github vue typescript" />
+        <item>
+            <guid isPermalink="true">https://www.yexingcheng.com/algorithm/DeepClone/</guid>
+            <title>js实现深拷贝</title>
+            <link>https://www.yexingcheng.com/algorithm/DeepClone/</link>
+            <category term="算法" scheme="https://www.yexingcheng.com/categories/algorithm/" />
+            <category term="js" scheme="https://www.yexingcheng.com/tags/js/" />
+            <category term="面试" scheme="https://www.yexingcheng.com/tags/%E9%9D%A2%E8%AF%95/" />
+            <category term="算法" scheme="https://www.yexingcheng.com/tags/%E7%AE%97%E6%B3%95/" />
+            <pubDate>Fri, 02 Dec 2022 11:22:10 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;要求：&#34;&gt;&lt;a href=&#34;#要求：&#34; class=&#34;headerlink&#34; title=&#34;要求：&#34;&gt;&lt;/a&gt;要求：&lt;/h1&gt;&lt;p&gt;1、请实现一个对象深拷贝的方法，要求支持全部is基本数据类型提示: typeof 用来检测变量的数据类型，返回值一共有六个&lt;br&gt;‘number’&lt;br&gt;‘string’”boolean’&lt;br&gt;‘object’&lt;br&gt;‘undefined’&lt;br&gt;‘function’&lt;/p&gt;
+&lt;p&gt;核心思路：&lt;strong&gt;递归&lt;/strong&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://www.yexingcheng.com/interview-questions/%E9%87%91%E5%8D%B0%E5%AE%A2%E7%94%B5%E5%AD%90/</guid>
             <title>金印客电子面试题</title>
@@ -534,8 +547,8 @@ console.log(sortStack(arr))
             <title>数组代码面试题</title>
             <link>https://www.yexingcheng.com/data-structures/array/</link>
             <category term="数据结构" scheme="https://www.yexingcheng.com/categories/data-structures/" />
-            <category term="Array" scheme="https://www.yexingcheng.com/tags/Array/" />
             <category term="js" scheme="https://www.yexingcheng.com/tags/js/" />
+            <category term="Array" scheme="https://www.yexingcheng.com/tags/Array/" />
             <pubDate>Fri, 11 Nov 2022 22:11:17 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;查找数组中最小和次小的元素&#34;&gt;&lt;a href=&#34;#查找数组中最小和次小的元素&#34; class=&#34;headerlink&#34; title=&#34;查找数组中最小和次小的元素&#34;&gt;&lt;/a&gt;查找数组中最小和次小的元素&lt;/h1&gt;&lt;h2 id=&#34;实例：&#34;&gt;&lt;a href=&#34;#实例：&#34; class=&#34;headerlink&#34; title=&#34;实例：&#34;&gt;&lt;/a&gt;实例：&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;输入：arr[] = &amp;#123;12, 13, 1, 10, 34, 1&amp;#125;
 输出：最小元素是 1 
@@ -933,111 +946,6 @@ add();
 &lt;/ul&gt;
 &lt;p&gt;原因：div中的ul li 得到这个div，会间接引用某个得到的li，那么此时因为div间接引用li，即使li被清空，也还是在内存中，并且只要li不被删除，他的父元素都不会被删除。&lt;br&gt;解决：手动删除清空。&lt;/p&gt;
  ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://www.yexingcheng.com/algorithm/toTree/</guid>
-            <title>扁平数据结构转tree</title>
-            <link>https://www.yexingcheng.com/algorithm/toTree/</link>
-            <category term="算法" scheme="https://www.yexingcheng.com/categories/algorithm/" />
-            <category term="js" scheme="https://www.yexingcheng.com/tags/js/" />
-            <category term="面试" scheme="https://www.yexingcheng.com/tags/%E9%9D%A2%E8%AF%95/" />
-            <category term="算法" scheme="https://www.yexingcheng.com/tags/%E7%AE%97%E6%B3%95/" />
-            <pubDate>Fri, 04 Nov 2022 10:11:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;题目要求&#34;&gt;&lt;a href=&#34;#题目要求&#34; class=&#34;headerlink&#34; title=&#34;题目要求&#34;&gt;&lt;/a&gt;题目要求&lt;/h1&gt;&lt;p&gt;首先来看下题目:打平的数据内容如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;let arr = [
-    &amp;#123;id: 1, name: &amp;#39;部门1&amp;#39;, pid: 0&amp;#125;,
-    &amp;#123;id: 2, name: &amp;#39;部门2&amp;#39;, pid: 1&amp;#125;,
-    &amp;#123;id: 3, name: &amp;#39;部门3&amp;#39;, pid: 1&amp;#125;,
-    &amp;#123;id: 4, name: &amp;#39;部门4&amp;#39;, pid: 3&amp;#125;,
-    &amp;#123;id: 5, name: &amp;#39;部门5&amp;#39;, pid: 4&amp;#125;,
-]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;我们想要的输出结果如下:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;json&#34;&gt;[
-    &amp;#123;
-        &amp;quot;id&amp;quot;: 1,
-        &amp;quot;name&amp;quot;: &amp;quot;部门1&amp;quot;,
-        &amp;quot;pid&amp;quot;: 0,
-        &amp;quot;children&amp;quot;: [
-            &amp;#123;
-                &amp;quot;id&amp;quot;: 2,
-                &amp;quot;name&amp;quot;: &amp;quot;部门2&amp;quot;,
-                &amp;quot;pid&amp;quot;: 1,
-                &amp;quot;children&amp;quot;: []
-            &amp;#125;,
-            &amp;#123;
-                &amp;quot;id&amp;quot;: 3,
-                &amp;quot;name&amp;quot;: &amp;quot;部门3&amp;quot;,
-                &amp;quot;pid&amp;quot;: 1,
-                &amp;quot;children&amp;quot;: [
-                    // 结果 ,,,
-                ]
-            &amp;#125;
-        ]
-    &amp;#125;
-]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;首先我们要了解一个概念，衡量一个算法的好坏，主要看算法的时间复杂度和空间复杂度&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;时间复杂度的计算并不是计算程序具体运行的时间，而是算法执行语句的次数。 随着n的不断增大，时间复杂度不断增大，算法花费时间越多。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;时间复杂度&#34;&gt;&lt;a href=&#34;#时间复杂度&#34; class=&#34;headerlink&#34; title=&#34;时间复杂度&#34;&gt;&lt;/a&gt;时间复杂度&lt;/h2&gt;&lt;h3 id=&#34;计算方法&#34;&gt;&lt;a href=&#34;#计算方法&#34; class=&#34;headerlink&#34; title=&#34;计算方法&#34;&gt;&lt;/a&gt;计算方法&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;选取相对增长最高的项&lt;/li&gt;
-&lt;li&gt;最高项系数是都化为1&lt;/li&gt;
-&lt;li&gt;若是常数的话用O(1)表示 举个例子：如f(n)&amp;#x3D;3*n^4+3n+300 则 O(n)&amp;#x3D;n^4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;通常我们计算时间复杂度都是计算最坏情况。计算时间复杂度的要注意的几个点&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如果算法的执行时间不随n的增加而增长，假如算法中有上千条语句，执行时间也不过是一个较大的常数。此类算法的时间复杂度是O(1)。 举例如下：代码执行100次，是一个常数，复杂度也是O(1)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;    let x = 1;
-    while (x &amp;lt;100) &amp;#123;
-     x++;
-    &amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;有多个循环语句时候，算法的时间复杂度是由嵌套层数最多的循环语句中最内层语句的方法决定的。举例如下：在下面for循环当中，外层循环每执行一次，内层循环要执行n次，执行次数是根据n所决定的，时间复杂度是O(n^2)。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;  for (i = 0; i &amp;lt; n; i++)&amp;#123;
-         for (j = 0; j &amp;lt; n; j++) &amp;#123;
-             // ...code
-         &amp;#125;
-     &amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;循环不仅与n有关，还与执行循环判断条件有关。举例如下：在代码中，如果arr[i]不等于1的话，时间复杂度是O(n)。如果arr[i]等于1的话，循环不执行，时间复杂度是O(0)。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;    for(var i = 0; i&amp;lt;n &amp;amp;&amp;amp; arr[i] !=1; i++) &amp;#123;
-    // ...code
-    &amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;空间复杂度&#34;&gt;&lt;a href=&#34;#空间复杂度&#34; class=&#34;headerlink&#34; title=&#34;空间复杂度&#34;&gt;&lt;/a&gt;空间复杂度&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;空间复杂度是对一个算法在运行过程中临时占用存储空间的大小。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;计算方法-1&#34;&gt;&lt;a href=&#34;#计算方法-1&#34; class=&#34;headerlink&#34; title=&#34;计算方法&#34;&gt;&lt;/a&gt;计算方法&lt;/h3&gt;&lt;p&gt;1、 忽略常数，用O(1)表示&lt;/p&gt;
-&lt;p&gt;2、 递归算法的空间复杂度 &amp;#x3D; （递归深度n）*(每次递归所要的辅助空间)&lt;/p&gt;
-&lt;p&gt;计算空间复杂度的简单几点&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;仅仅只复制单个变量，空间复杂度为O(1)。 以下例子空间复杂度为O(1)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;   let a = 1;
-   let b = 2;
-   let c = 3;
-   console.log(&amp;#39;输出a,b,c&amp;#39;, a, b, c);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;递归实现，调用fun函数，每次都创建一个变量K，调用n次，空间复杂度O(n*1) &amp;#x3D; O(n)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;js&#34;&gt;    function fun(n) &amp;#123;
-       let k = 10;
-       if (n == k) &amp;#123;
-           return n;
-       &amp;#125; else &amp;#123;
-           return fun(++n)
-       &amp;#125;
-    &amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;不考虑性能实现，递归遍历查找&#34;&gt;&lt;a href=&#34;#不考虑性能实现，递归遍历查找&#34; class=&#34;headerlink&#34; title=&#34;不考虑性能实现，递归遍历查找&#34;&gt;&lt;/a&gt;不考虑性能实现，递归遍历查找&lt;/h1&gt; ]]></description>
         </item>
     </channel>
 </rss>
