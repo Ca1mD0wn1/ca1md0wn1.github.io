@@ -304,7 +304,7 @@
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/tags/index/</loc>
+    <loc>https://www.yexingcheng.com/tags/Array/</loc>
     <lastmod>2022-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -318,7 +318,7 @@
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/tags/Array/</loc>
+    <loc>https://www.yexingcheng.com/tags/index/</loc>
     <lastmod>2022-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -346,20 +346,6 @@
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/tags/windows/</loc>
-    <lastmod>2022-12-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.yexingcheng.com/tags/windows11/</loc>
-    <lastmod>2022-12-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.yexingcheng.com/tags/%E9%9D%A2%E8%AF%95/</loc>
     <lastmod>2022-12-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -374,7 +360,14 @@
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/tags/interview/</loc>
+    <loc>https://www.yexingcheng.com/tags/windows/</loc>
+    <lastmod>2022-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yexingcheng.com/tags/windows11/</loc>
     <lastmod>2022-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -382,6 +375,13 @@
   
   <url>
     <loc>https://www.yexingcheng.com/tags/stack/</loc>
+    <lastmod>2022-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.yexingcheng.com/tags/interview/</loc>
     <lastmod>2022-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -397,14 +397,14 @@
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/categories/index/</loc>
+    <loc>https://www.yexingcheng.com/categories/JavaScript/</loc>
     <lastmod>2022-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/categories/JavaScript/</loc>
+    <loc>https://www.yexingcheng.com/categories/index/</loc>
     <lastmod>2022-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -418,14 +418,14 @@
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/</loc>
+    <loc>https://www.yexingcheng.com/categories/algorithm/</loc>
     <lastmod>2022-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.yexingcheng.com/categories/algorithm/</loc>
+    <loc>https://www.yexingcheng.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/</loc>
     <lastmod>2022-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
